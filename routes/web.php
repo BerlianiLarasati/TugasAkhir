@@ -17,3 +17,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/destinasi', function () {
+    return view('destinasi');
+});
+
