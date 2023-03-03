@@ -66,9 +66,8 @@
           <div class="menu">
             <a href="">BERANDA</a>
             <a href="">DESTINASI</a>
-            <a href="">EVENT</a>
-            <a href="">AKOMODASI</a>
-            <a href="">INFORMASI</a>
+            <a href="">UMKM</a>
+            <a href="">LOGIN</a>
           </div>
         </div>
         <div class="welcome">
