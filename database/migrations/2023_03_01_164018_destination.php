@@ -20,9 +20,9 @@ class Destination extends Migration
             $table->string('address_url');
             $table->text('description');
             $table->unsignedBigInteger('area_id');
-            // $table->foreign('area_id')->references('id')->on('area')->onDelete('cascade');
+            $table->foreign('area_id')->references('id')->on('area')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');
-            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
         
