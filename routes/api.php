@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DestinationControoller;
+use App\Http\Controllers\AreaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,7 @@ use App\Http\Controllers\DestinationControoller;
 Route::get('/destination',[DestinationControoller::class, 'index']);
 Route::post('/destination',[DestinationControoller::class, 'store']);
 
+
+// area
+Route::get('/area', [AreaController::class, 'index']);
+Route::post('/area', [AreaController::class, 'store']);

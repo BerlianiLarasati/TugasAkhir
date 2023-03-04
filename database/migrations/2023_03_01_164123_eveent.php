@@ -13,7 +13,7 @@ class Eveent extends Migration
      */
     public function up()
     {
-        Schema::create('eveent', function (Blueprint $table) {
+        Schema::create('eveents', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('user_id');
@@ -34,6 +34,6 @@ class Eveent extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eveent');
+        Schema::dropIfExists('eveents');
     }
 }

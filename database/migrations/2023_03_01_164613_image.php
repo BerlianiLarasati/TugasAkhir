@@ -13,7 +13,7 @@ class Image extends Migration
      */
     public function up()
     {
-        Schema::create('image', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->enum('type', ['destination', 'event']);
             $table->string('parent_id');
@@ -29,6 +29,6 @@ class Image extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('image');
+        Schema::dropIfExists('images');
     }
 }

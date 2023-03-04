@@ -13,12 +13,12 @@ class DestinationCategorie extends Migration
      */
     public function up()
     {
-        Schema::create('destination_category', function (Blueprint $table) {
+        Schema::create('destination_categorys', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('destination_id');
-            $table->foreign('destination_id')->references('id')->on('destination');
+            $table->foreign('destination_id')->references('id')->on('destinations');
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('category');
+            $table->foreign('category_id')->references('id')->on('categorys');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class DestinationCategorie extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('destination_category');
+        Schema::dropIfExists('destination_categorys');
     }
 }
