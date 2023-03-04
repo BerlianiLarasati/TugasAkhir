@@ -16,9 +16,9 @@ class DestinationCategorie extends Migration
         Schema::create('destination_category', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('destination_id');
-            // $table->foreign('destination_id')->references('id')->on('destination');
+            $table->foreign('destination_id')->references('id')->on('destination');
             $table->unsignedBigInteger('category_id');
-            // $table->foreign('category_id')->references('id')->on('category');
+            $table->foreign('category_id')->references('id')->on('category');
             $table->timestamps();
         });
     }
