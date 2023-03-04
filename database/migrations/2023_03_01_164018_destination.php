@@ -13,14 +13,14 @@ class Destination extends Migration
      */
     public function up()
     {
-        Schema::create('destination', function (Blueprint $table) {
+        Schema::create('destinations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('address');
             $table->string('address_url');
             $table->text('description');
             $table->unsignedBigInteger('area_id');
-            $table->foreign('area_id')->references('id')->on('area')->onDelete('cascade');
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
@@ -35,6 +35,6 @@ class Destination extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('destination');
+        Schema::dropIfExists('destinations');
     }
 }
