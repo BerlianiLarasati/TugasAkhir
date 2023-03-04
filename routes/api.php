@@ -20,4 +20,5 @@ use App\Http\Controllers\DestinationControoller;
 // });
 
 Route::get('/destination',[DestinationControoller::class, 'index']);
+Route::post('/destination',[DestinationControoller::class, 'store']);
 

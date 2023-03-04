@@ -14,7 +14,7 @@ class DestinationControoller extends Controller
      */
     public function index()
     {
-        $destinations = Destination::latest()->get();
+        $destinations = Destination::get();
 
         return response()->json([
             'data' => $destinations
@@ -39,7 +39,25 @@ class DestinationControoller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $destinations = new Destination();
+        $destinations->name = $request->name;
+        $destinations->address = $request->address;
+        $destinations->address_url = $request->address_url;
+        $destinations->description = $request->description;
+        $destinations->area_id = $request->area_id;
+        $destinations->user_id = $request->user_id;
+        $destinations->save();
+
+        return response()->json([
+            'data' => $destinations
+        ]);
+
+        // 'name',
+        // 'address',
+        // 'address_url',
+        // 'description',
+        // 'area_id',
+        // 'user_id' 
     }
 
     /**
