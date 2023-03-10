@@ -64,10 +64,10 @@
             alt=""
           />
           <div class="menu">
-            <a href="">BERANDA</a>
-            <a href="">DESTINASI</a>
+            <a href="/beranda">BERANDA</a>
+            <a href="/destinasi">DESTINASI</a>
             <a href="">UMKM</a>
-            <a href="">LOGIN</a>
+            <a href="/register">LOGIN</a>
           </div>
         </div>
         <div class="welcome">

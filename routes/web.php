@@ -25,3 +25,6 @@ Route::get('/destinasi', function () {
 Route::get('/register', function () {
     return view('register');
 });
+Route::get('/beranda', function () {
+    return view('index');
+});
