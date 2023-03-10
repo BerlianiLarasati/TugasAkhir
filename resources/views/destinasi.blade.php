@@ -39,7 +39,7 @@
           <a href="/beranda">BERANDA</a>
           <a href="">DESTINASI</a>
           <a href="">UMKM</a>
-          <a href="/registrasi">LOGIN</a>
+          <a href="/login">LOGIN</a>
         </div>
     </div>
     <div class="namepage">
