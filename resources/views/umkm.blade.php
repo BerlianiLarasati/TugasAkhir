@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <div class="namepage-umkm">
+    <div class="namepage">
     <a href="">Beranda > UMKM</a>
     <h1>PRODUK UMKM</h1>
 </div>
@@ -86,7 +86,7 @@
     </div>
     
     <div class="card-umkm">
-        <img src="https://i.pinimg.com/736x/18/1a/c7/181ac719b6d7ef70c0190ff3dc502a65.jpg" alt="">
+        <img src="https://tourism.surabaya.go.id/storage/tour/1648709900_1.jpg" alt="">
         <div class="intro-umkm">
             <div class="label-umkm">fashion</div>
             <h1>kain jumputan</h1>
@@ -97,7 +97,7 @@
     </div>
 
     <div class="card-umkm">
-        <img src="https://i.pinimg.com/736x/18/1a/c7/181ac719b6d7ef70c0190ff3dc502a65.jpg" alt="">
+        <img src="https://tourism.surabaya.go.id/storage/tour/1648711246_1.jpg" alt="">
         <div class="intro-umkm">
             <div class="label-umkm">decoration</div>
             <h1>Clairins Art Painting</h1>
