@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +16,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(10)->create();
+        Role::create([
+            'role_name' => 'superadmin',
+        ]);
+
+        Role::create([
+            'role_name' => 'contributor',
+        ]);
+
+        User::factory(5)->create();
     }
 }
