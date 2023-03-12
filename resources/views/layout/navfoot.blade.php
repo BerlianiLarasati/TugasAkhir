@@ -53,22 +53,6 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 </head>
-
-
-<!-- <div class="navigasi">
-        <img
-          src="https://tourism.surabaya.go.id/assets/front/images/img-logo-sparkling.png"
-          alt=""
-        />
-        <div class="menu">
-          <a href="">BERANDA</a>
-          <a href="">DESTINASI</a>
-          <a href="">UMKM</a>
-          <a href="">LOGIN</a>
-        </div>
-    </div> -->
-
-
 <body>
     <div class="navigasi">
         <a href="{{route('home')}}">
