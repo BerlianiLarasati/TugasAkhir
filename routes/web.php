@@ -33,6 +33,9 @@ use App\Http\Controllers\ContributorController;
  Route::get('/beranda', function () {
      return view('index');
  });
+ Route::get('/umkm', function () {
+     return view('contributor.data');
+ });
 
 //  jika user belum login
 Route::group(['middleware' => 'guest'], function() {

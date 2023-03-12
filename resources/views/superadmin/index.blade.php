@@ -132,7 +132,7 @@
                             <li class="menu-title">Navigation</li>
                 
                             <li>
-                                <a href="index.html">
+                                <a href="/superadmin">
                                     <i class="mdi mdi-view-dashboard-outline"></i>
                                     <span class="badge bg-success rounded-pill float-end">9+</span>
                                     <span> Dashboard </span>
@@ -144,16 +144,16 @@
                             <li>
                                 <a href="#sidebarTasks" data-bs-toggle="collapse">
                                     <i class="mdi mdi-clipboard-outline"></i>
-                                    <span> Tasks </span>
+                                    <span> Data </span>
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <div class="collapse" id="sidebarTasks">
                                     <ul class="nav-second-level">
                                         <li>
-                                            <a href="task-kanban-board.html">Kanban Board</a>
+                                            <a href="/superadmin">Destinasi</a>
                                         </li>
                                         <li>
-                                            <a href="task-details.html">Details</a>
+                                            <a href="t/superadmin">UMKM</a>
                                         </li>
                                     </ul>
                                 </div>

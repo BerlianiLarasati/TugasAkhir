@@ -2,22 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <meta charset="utf-8" />
-        <title>Contributor | SurabayaTourism</title>
+        <title>Table Editable | Adminto - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/surabaya-logo.png">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-        <!-- App css -->
+		<!-- App css -->
 
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+		<link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
-        <!-- icons -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+		<!-- icons -->
+		<link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -26,7 +25,6 @@
 
         <!-- Begin page -->
         <div id="wrapper">
-
 
             <!-- Topbar Start -->
             <div class="navbar-custom">
@@ -170,11 +168,11 @@
 
             </div>
             <!-- Left Sidebar End -->
-
+            
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
-         
+
             <div class="content-page">
                 <div class="content">
 
@@ -182,197 +180,126 @@
                     <div class="container-fluid">
 
                         <div class="row">
-
-                            <div class="col-xl-4 col-md-6">
+                            <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Another action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Something else</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
-                                            </div>
-                                        </div>
-    
-                                        <h4 class="header-title mt-0 mb-4">Total Pengunjung</h4>
-    
-                                        <div class="widget-chart-1">
-                                            <div class="widget-chart-box-1 float-start" dir="ltr">
-                                                <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#f05050 "
-                                                       data-bgColor="#F9B9B9" value="58"
-                                                       data-skin="tron" data-angleOffset="180" data-readOnly=true
-                                                       data-thickness=".15"/>
-                                            </div>
-    
-                                            <div class="widget-detail-1 text-end">
-                                                <h2 class="fw-normal pt-2 mb-1"> 256 </h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end col -->
-                            
-                            <div class="col-xl-4 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Another action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Something else</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
-                                            </div>
-                                        </div>
-    
-                                        <h4 class="header-title mt-0 mb-3">Total Destinasi</h4>
-    
-                                        <div class="widget-box-2">
-                                            <div class="widget-detail-2 text-end">
-                                                <span class="badge bg-pink rounded-pill float-start mt-3">32% <i class="mdi mdi-trending-up"></i> </span>
-                                                <h2 class="fw-normal mb-1"> 18 </h2>
-                                                <p class="text-muted mb-3">Revenue today</p>
-                                            </div>
-                                            <div class="progress progress-bar-alt-pink progress-sm">
-                                                <div class="progress-bar bg-pink" role="progressbar"
-                                                        aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
-                                                        style="width: 77%;">
-                                                    <span class="visually-hidden">77% Complete</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div><!-- end col -->
-
-                            <div class="col-xl-4 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Another action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Something else</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
-                                            </div>
-                                        </div>
-    
-                                        <h4 class="header-title mt-0 mb-4">Total UMKM</h4>
-    
-                                        <div class="widget-chart-1">
-                                            <div class="widget-chart-box-1 float-start" dir="ltr">
-                                                <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#ffbd4a"
-                                                        data-bgColor="#FFE6BA" value="80"
-                                                        data-skin="tron" data-angleOffset="180" data-readOnly=true
-                                                        data-thickness=".15"/>
-                                            </div>
-                                            <div class="widget-detail-1 text-end">
-                                                <h2 class="fw-normal pt-2 mb-1"> 20 </h2>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end col -->
-
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-
-                            <div class="col-xl-16">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Another action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Something else</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
-                                            </div>
-                                        </div>
-    
-                                        <h4 class="header-title mt-0 mb-3">List Contributor</h4>
-    
+        
+                                        <h5 class="mt-0">Inline edit with Button</h5>
+                                        <p class="sub-header">Inline edit like a spreadsheet, toolbar column with edit button only and without focus on first input.</p>
                                         <div class="table-responsive">
-                                            <table class="table table-hover mb-0">
+                                            <table class="table table-centered mb-0" id="btn-editable">
                                                 <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Nama Contributor</th>
-                                                    <th>Start Date</th>
-                                                    <th>Nama UMKM</th>
-                                                    <th>Status</th>
-                                                    <th>Assign</th>
-                                                </tr>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
+                                                        <th>Office</th>
+                                                        <th>Age</th>
+                                                        <th>Start date</th>
+                                                        <th>Salary</th>
+                                                    </tr>
                                                 </thead>
+                                            
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>Hafiz Ahmad</td>
-                                                        <td>01/01/2017</td>
-                                                        <td>26/04/2017</td>
-                                                        <td><span class="badge bg-danger">Released</span></td>
-                                                        <td>SuperAdmin</td>
+                                                        <td>Tiger Nixon</td>
+                                                        <td>System Architect</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>61</td>
+                                                        <td>2011/04/25</td>
+                                                        <td>$320,800</td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
-                                                        <td>Ardi Pratama</td>
-                                                        <td>08/02/2017</td>
-                                                        <td>26/04/2017</td>
-                                                        <td><span class="badge bg-danger">Released</span></td>
-                                                        <td>SuperAdmin</td>
+                                                        <td>Garrett Winters</td>
+                                                        <td>Accountant</td>
+                                                        <td>Tokyo</td>
+                                                        <td>63</td>
+                                                        <td>2011/07/25</td>
+                                                        <td>$170,750</td>
                                                     </tr>
                                                     <tr>
                                                         <td>3</td>
-                                                        <td>Agus Hendra</td>
-                                                        <td>012/03/2017</td>
-                                                        <td>26/09/2017</td>
-                                                        <td><span class="badge bg-danger">Released</span></td>
-                                                        <td>SuperAdmin</td>
+                                                        <td>Ashton Cox</td>
+                                                        <td>Junior Technical Author</td>
+                                                        <td>San Francisco</td>
+                                                        <td>66</td>
+                                                        <td>2009/01/12</td>
+                                                        <td>$86,000</td>
                                                     </tr>
-    
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Cedric Kelly</td>
+                                                        <td>Senior Javascript Developer</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>22</td>
+                                                        <td>2012/03/29</td>
+                                                        <td>$433,060</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Airi Satou</td>
+                                                        <td>Accountant</td>
+                                                        <td>Tokyo</td>
+                                                        <td>33</td>
+                                                        <td>2008/11/28</td>
+                                                        <td>$162,700</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Brielle Williamson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>New York</td>
+                                                        <td>61</td>
+                                                        <td>2012/12/02</td>
+                                                        <td>$372,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Herrod Chandler</td>
+                                                        <td>Sales Assistant</td>
+                                                        <td>San Francisco</td>
+                                                        <td>59</td>
+                                                        <td>2012/08/06</td>
+                                                        <td>$137,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Rhona Davidson</td>
+                                                        <td>Integration Specialist</td>
+                                                        <td>Tokyo</td>
+                                                        <td>55</td>
+                                                        <td>2010/10/14</td>
+                                                        <td>$327,900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Colleen Hurst</td>
+                                                        <td>Javascript Developer</td>
+                                                        <td>San Francisco</td>
+                                                        <td>39</td>
+                                                        <td>2009/09/15</td>
+                                                        <td>$205,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Sonya Frost</td>
+                                                        <td>Software Engineer</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>23</td>
+                                                        <td>2008/12/13</td>
+                                                        <td>$103,600</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                    </div> 
-                                </div>
-                               
-                            </div><!-- end col -->
-
-                        </div>
-                        <!-- end row -->       
-                        
-                    </div> <!-- container-fluid -->
+                                        </div> <!-- end .table-responsive-->
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card -->
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+    
+                    </div> <!-- container -->
 
                 </div> <!-- content -->
 
@@ -381,7 +308,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> &copy; Kelompok 4 Yestech
+                                <script>document.write(new Date().getFullYear())</script> &copy; Adminto theme by <a href="">Coderthemes</a> 
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-end footer-links d-none d-sm-block">
@@ -396,6 +323,7 @@
                 <!-- end Footer -->
 
             </div>
+
             <!-- ============================================================== -->
             <!-- End Page content -->
             <!-- ============================================================== -->
@@ -558,17 +486,13 @@
         <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
         <script src="assets/libs/feather-icons/feather.min.js"></script>
 
-        <!-- knob plugin -->
-        <script src="assets/libs/jquery-knob/jquery.knob.min.js"></script>
+        <!-- Table Editable plugin-->
+        <script src="assets/libs/jquery-tabledit/jquery.tabledit.min.js"></script>
 
-        <!--Morris Chart-->
-        <script src="assets/libs/morris.js06/morris.min.js"></script>
-        <script src="assets/libs/raphael/raphael.min.js"></script>
-  
-        <!-- Dashboar init js-->
-        <script src="assets/js/pages/dashboard.init.js"></script>
+        <!-- Table editable init-->
+        <script src="assets/js/pages/tabledit.init.js"></script>
 
-        <!-- App js-->
+        <!-- App js -->
         <script src="assets/js/app.min.js"></script>
         
     </body>
