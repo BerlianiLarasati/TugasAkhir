@@ -46,6 +46,41 @@
         <a href="">Beranda > Destinasi Wisata</a>
         <h1>DESTINASI WISATA</h1>
     </div>
+    <div class="filter">
+      <div class="col">
+        <select id="filter-wiayah" class="form-control">
+          <option value="">Filter Wilayah</option>
+          <option value="">Semua</option>
+          <option value="">Surabaya Pusat</option>
+          <option value="">Surabaya Barat</option>
+          <option value="">Surabaya Timur</option>
+          <option value="">Surabaya Utara</option>
+          <option value="">Surabaya Selatan</option>
+        </select>
+      </div>
+      <div class="col">
+        <select id="filter-kategori" class="form-control">
+          <option value="">Filter Kategori</option>
+          <option value="">Semua</option>
+          <option value="">History and Heritage</option>
+          <option value="">Museum</option>
+          <option value="">Religi</option>
+          <option value="">Kampung Wisata</option>
+          <option value="">City Park</option>
+          <option value="">Outdoor and Nature</option>
+          <option value="">Pusat Perbelanjaan</option>
+          <option value="">Pasar Tradisional</option>
+        </select>
+      </div>
+      <div class="col">
+        <select id="filter-kategori" class="form-control">
+          <option value="">Filter Keyword</option>
+        </select>
+      </div>
+      <div class="col">
+        <button>Filter</button>
+      </div>
+    </div>
     <div class="destination">
         <div class="pendidikan">
             <div class="sub-destination">
