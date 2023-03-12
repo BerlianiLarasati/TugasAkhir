@@ -37,11 +37,14 @@ Route::get('/registrasi', function () {
 Route::get('/beranda', function () {
     return view('index');
 });
+Route::get('/wkwkwk/coba', function () {
+    return view('contributor.coba.coba');
+});
 
 
 //  jika user belum login
 Route::group(['middleware' => 'guest'], function() {
-    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::get('/masuk', [AuthController::class, 'login'])->name('login');
     Route::post('/', [AuthController::class, 'dologin']);
 
 });

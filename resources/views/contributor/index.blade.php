@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <meta charset="utf-8" />
         <title>Contributor | SurabayaTourism</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -207,9 +206,9 @@
                                         <div class="widget-chart-1">
                                             <div class="widget-chart-box-1 float-start" dir="ltr">
                                                 <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#f05050 "
-                                                       data-bgColor="#F9B9B9" value="58"
-                                                       data-skin="tron" data-angleOffset="180" data-readOnly=true
-                                                       data-thickness=".15"/>
+                                                    data-bgColor="#F9B9B9" value="58"
+                                                    data-skin="tron" data-angleOffset="180" data-readOnly=true
+                                                    data-thickness=".15"/>
                                             </div>
     
                                             <div class="widget-detail-1 text-end">
