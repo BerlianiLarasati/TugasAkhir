@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Log In | Adminto - Responsive Admin Dashboard Template</title>
+        <title>Log In | Surabaya Tourism</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/surabaya-logo.png">
 
 		<!-- App css -->
 
@@ -28,16 +28,16 @@
                     <div class="col-md-8 col-lg-6 col-xl-4">
                         <div class="text-center">   
                             <a href="index.html">
-                                <img src="assets/images/logo-dark.png" alt="" height="22" class="mx-auto">
+                                <img src="assets/images/surabaya-logo.png" alt="" height="22" class="mx-auto">
                             </a>
-                            <p class="text-muted mt-2 mb-4">Responsive Admin Dashboard</p>
+                            <p class="text-muted mt-2 mb-4">Selamat Datang Di Halaman Login</p>
 
                         </div>
                         <div class="card">
                             <div class="card-body p-4">
                                 
                                 <div class="text-center mb-4">
-                                    <h4 class="text-uppercase mt-0">Sign In</h4>
+                                    <h4 class="text-uppercase mt-0">Log In</h4>
                                 </div>
 
                                 @if (session()->has('error'))

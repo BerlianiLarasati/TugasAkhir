@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>SuperAdmin | SurabayaTourism</title>
+        <title>Contributor | SurabayaTourism</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -132,7 +132,7 @@
                             <li class="menu-title">Navigation</li>
                 
                             <li>
-                                <a href="index.html">
+                                <a href="/contributor">
                                     <i class="mdi mdi-view-dashboard-outline"></i>
                                     <span class="badge bg-success rounded-pill float-end">9+</span>
                                     <span> Dashboard </span>
@@ -219,44 +219,7 @@
                                     </div>
                                 </div>
                             </div><!-- end col -->
-
-                            <div class="col-xl-4 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Another action</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Something else</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
-                                            </div>
-                                        </div>
-    
-                                        <h4 class="header-title mt-0 mb-4">Total UMKM</h4>
-    
-                                        <div class="widget-chart-1">
-                                            <div class="widget-chart-box-1 float-start" dir="ltr">
-                                                <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#ffbd4a"
-                                                        data-bgColor="#FFE6BA" value="80"
-                                                        data-skin="tron" data-angleOffset="180" data-readOnly=true
-                                                        data-thickness=".15"/>
-                                            </div>
-                                            <div class="widget-detail-1 text-end">
-                                                <h2 class="fw-normal pt-2 mb-1"> 20 </h2>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- end col -->
-
+                            
                             <div class="col-xl-4 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
@@ -297,6 +260,43 @@
                                 
                             </div><!-- end col -->
 
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="dropdown float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Something else</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
+                                            </div>
+                                        </div>
+    
+                                        <h4 class="header-title mt-0 mb-4">Total UMKM</h4>
+    
+                                        <div class="widget-chart-1">
+                                            <div class="widget-chart-box-1 float-start" dir="ltr">
+                                                <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#ffbd4a"
+                                                        data-bgColor="#FFE6BA" value="80"
+                                                        data-skin="tron" data-angleOffset="180" data-readOnly=true
+                                                        data-thickness=".15"/>
+                                            </div>
+                                            <div class="widget-detail-1 text-end">
+                                                <h2 class="fw-normal pt-2 mb-1"> 20 </h2>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end col -->
+
                         </div>
                         <!-- end row -->
 
@@ -321,16 +321,16 @@
                                             </div>
                                         </div>
     
-                                        <h4 class="header-title mt-0 mb-3">Latest Projects</h4>
+                                        <h4 class="header-title mt-0 mb-3">List Contributor</h4>
     
                                         <div class="table-responsive">
                                             <table class="table table-hover mb-0">
                                                 <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Project Name</th>
+                                                    <th>Nama Contributor</th>
                                                     <th>Start Date</th>
-                                                    <th>Due Date</th>
+                                                    <th>Nama UMKM</th>
                                                     <th>Status</th>
                                                     <th>Assign</th>
                                                 </tr>
@@ -338,53 +338,27 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>Adminto Admin v1</td>
+                                                        <td>Hafiz Ahmad</td>
                                                         <td>01/01/2017</td>
                                                         <td>26/04/2017</td>
                                                         <td><span class="badge bg-danger">Released</span></td>
-                                                        <td>Coderthemes</td>
+                                                        <td>SuperAdmin</td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
-                                                        <td>Adminto Frontend v1</td>
-                                                        <td>01/01/2017</td>
+                                                        <td>Ardi Pratama</td>
+                                                        <td>08/02/2017</td>
                                                         <td>26/04/2017</td>
-                                                        <td><span class="badge bg-success">Released</span></td>
-                                                        <td>Adminto admin</td>
+                                                        <td><span class="badge bg-danger">Released</span></td>
+                                                        <td>SuperAdmin</td>
                                                     </tr>
                                                     <tr>
                                                         <td>3</td>
-                                                        <td>Adminto Admin v1.1</td>
-                                                        <td>01/05/2017</td>
-                                                        <td>10/05/2017</td>
-                                                        <td><span class="badge bg-pink">Pending</span></td>
-                                                        <td>Coderthemes</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Adminto Frontend v1.1</td>
-                                                        <td>01/01/2017</td>
-                                                        <td>31/05/2017</td>
-                                                        <td><span class="badge bg-purple">Work in Progress</span>
-                                                        </td>
-                                                        <td>Adminto admin</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>5</td>
-                                                        <td>Adminto Admin v1.3</td>
-                                                        <td>01/01/2017</td>
-                                                        <td>31/05/2017</td>
-                                                        <td><span class="badge bg-warning">Coming soon</span></td>
-                                                        <td>Coderthemes</td>
-                                                    </tr>
-    
-                                                    <tr>
-                                                        <td>6</td>
-                                                        <td>Adminto Admin v1.3</td>
-                                                        <td>01/01/2017</td>
-                                                        <td>31/05/2017</td>
-                                                        <td><span class="badge bg-primary">Coming soon</span></td>
-                                                        <td>Adminto admin</td>
+                                                        <td>Agus Hendra</td>
+                                                        <td>012/03/2017</td>
+                                                        <td>26/09/2017</td>
+                                                        <td><span class="badge bg-danger">Released</span></td>
+                                                        <td>SuperAdmin</td>
                                                     </tr>
     
                                                 </tbody>
@@ -407,7 +381,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                                <script>document.write(new Date().getFullYear())</script> &copy; Adminto theme by <a href="">Coderthemes</a> 
+                                <script>document.write(new Date().getFullYear())</script> &copy; Kelompok 4 Yestech
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-end footer-links d-none d-sm-block">
