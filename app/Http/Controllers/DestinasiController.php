@@ -111,27 +111,18 @@ class DestinasiController extends Controller
         'deskripsi' => 'required',
         'wilayah' => 'required',
         'kategori' => 'required',
-        'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
     ]);
-
-    if ($request->hasFile('gambar')) {
-        $image = $request->file('gambar');
-        $image->storeAs('public/image', $image->hashName());
-    
         $destinasi = Destinasi::find($id);
         $destinasi->nama = $request->nama;
         $destinasi->alamat = $request->alamat;
         $destinasi->deskripsi = $request->deskripsi;
         $destinasi->wilayah = $request->wilayah;
         $destinasi->kategori = $request->kategori;
-        $destinasi->gambar = $image->hashName();
         $destinasi->save();
 
-        // konversi data ke JSON dan atur tipe konten respons
         return response()->json([
             'data' => $destinasi
         ]);
-    }
 }
 
 
