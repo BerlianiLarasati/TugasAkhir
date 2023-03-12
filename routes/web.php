@@ -17,18 +17,22 @@ use App\Http\Controllers\ContributorController;
 |
 */
 
- Route::get('/', function () {
-     return view('index');
- });
+Route::get('/', function () {
+    return view('index');
+})->name('home');
 
 
- Route::get('/destinasi', function () {
-     return view('destinasi');
- });
+Route::get('/destinasi', function () {
+    return view('destinasi');
+})->name('destinasi');
+
+Route::get('/umkm', function () {
+    return view('umkm');
+})->name('umkm');
 
  Route::get('/registrasi', function () {
      return view('register');
- });
+ })->name('register');
 
  Route::get('/beranda', function () {
      return view('index');
