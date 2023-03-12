@@ -28,4 +28,4 @@ Route::get('/umkm', function () {
 
 Route::get('/register', function () {
     return view('register');
-});
+})->name('register');
