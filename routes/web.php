@@ -30,16 +30,14 @@ Route::get('/umkm', function () {
     return view('umkm');
 })->name('umkm');
 
- Route::get('/registrasi', function () {
-     return view('register');
- })->name('register');
+Route::get('/registrasi', function () {
+    return view('register');
+})->name('register');
 
- Route::get('/beranda', function () {
-     return view('index');
- });
- Route::get('/umkm', function () {
-     return view('contributor.data');
- });
+Route::get('/beranda', function () {
+    return view('index');
+});
+
 
 //  jika user belum login
 Route::group(['middleware' => 'guest'], function() {
