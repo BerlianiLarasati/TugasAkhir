@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class ContributorController extends Controller
 {
     public function index() {
-        return view('contributor.index');
+        return view('contributor.page.index');
+    }
+    public function destinasi() {
+        return view('contributor.page.destinasi');
     }
 }

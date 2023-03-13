@@ -79,7 +79,7 @@
               <li><a class="menu_list" href="{{route('home')}}">BERANDA</a></li>
               <li><a class="menu_list" href="{{route('destinasi')}}">DESTINASI</a></li>
               <li><a class="menu_list" href="{{route('umkm')}}">UMKM</a></li>
-              <li><a class="btn" href="#">LOG IN</a></li>
+              <li><a class="btn" href="{{route('login')}}">LOG IN</a></li>
             </ul>
         </div>
     </div>

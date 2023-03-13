@@ -66,3 +66,6 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor', [ContributorController::class, 'index']);
 
 });
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::get('/contributor/destinasi', [ContributorController::class, 'destinasi'])->name('Cdestinasi');
+});
