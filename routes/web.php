@@ -17,8 +17,16 @@ Route::get('/', function () {
     return view('index');
 });
 
+
+Route::get('/destinasi', function () {
+    return view('destinasi');
+});
+
 Route::get('/register', function () {
     return view('register');
 });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0d057051ef50e2b0ea0b3c5f3b68286c31e66b9c
