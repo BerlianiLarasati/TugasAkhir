@@ -54,21 +54,6 @@
     />
 </head>
 
-
-<!-- <div class="navigasi">
-        <img
-          src="https://tourism.surabaya.go.id/assets/front/images/img-logo-sparkling.png"
-          alt=""
-        />
-        <div class="menu">
-          <a href="">BERANDA</a>
-          <a href="">DESTINASI</a>
-          <a href="">UMKM</a>
-          <a href="">LOGIN</a>
-        </div>
-    </div> -->
-
-
 <body>
     <div class="navigasi">
         <a href="{{route('home')}}">
@@ -79,7 +64,7 @@
               <li><a class="menu_list" href="{{route('home')}}">BERANDA</a></li>
               <li><a class="menu_list" href="{{route('destinasi')}}">DESTINASI</a></li>
               <li><a class="menu_list" href="{{route('umkm')}}">UMKM</a></li>
-              <li><a class="btn" href="#">LOG IN</a></li>
+              <li><a class="btn" href="{{route('login')}}">LOG IN</a></li>
             </ul>
         </div>
     </div>
