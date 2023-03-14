@@ -61,6 +61,9 @@ Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
     Route::get('/superadmin', [SuperadminController::class, 'index']);
 });
 
+
+
+
 // untuk pegawai
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor', [ContributorController::class, 'index']);
@@ -68,4 +71,10 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
 });
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor/destinasi', [ContributorController::class, 'destinasi'])->name('Cdestinasi');
+});
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::get('/contributor/destinasi/create_destinasi', [ContributorController::class, 'create_destinasi'])->name('Cdestinasi_create');
+});
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::get('/contributor/destinasi/edit_destinasi', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi_create');
 });

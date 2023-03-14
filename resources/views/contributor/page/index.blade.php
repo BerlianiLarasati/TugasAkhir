@@ -1,8 +1,13 @@
 @extends('contributor.layout.master')
 
+@section('judul')
+<li>
+    <h4 class="page-title-main">Dashboard</h4>
+</li>
+@endsection
 @section('content')
-  <!-- Start Content-->
-  <div class="container-fluid">
+<!-- Start Content-->
+<div class="container-fluid">
 
     <div class="row">
 
@@ -14,10 +19,7 @@
 
                     <div class="widget-chart-1">
                         <div class="widget-chart-box-1 float-start" dir="ltr">
-                            <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#f05050 "
-                                   data-bgColor="#F9B9B9" value="58"
-                                   data-skin="tron" data-angleOffset="180" data-readOnly=true
-                                   data-thickness=".15"/>
+                            <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#f05050 " data-bgColor="#F9B9B9" value="58" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".15" />
                         </div>
 
                         <div class="widget-detail-1 text-end">
@@ -40,9 +42,7 @@
                             <p class="text-muted mb-3">Revenue today</p>
                         </div>
                         <div class="progress progress-bar-alt-success progress-sm">
-                            <div class="progress-bar bg-success" role="progressbar"
-                                    aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"
-                                    style="width: 77%;">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
                                 <span class="visually-hidden">77% Complete</span>
                             </div>
                         </div>
@@ -57,10 +57,7 @@
                     <h4 class="header-title mt-0 mb-4">Total UMKM</h4>
                     <div class="widget-chart-1">
                         <div class="widget-chart-box-1 float-start" dir="ltr">
-                            <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#ffbd4a"
-                                    data-bgColor="#FFE6BA" value="80"
-                                    data-skin="tron" data-angleOffset="180" data-readOnly=true
-                                    data-thickness=".15"/>
+                            <input data-plugin="knob" data-width="70" data-height="70" data-fgColor="#ffbd4a" data-bgColor="#FFE6BA" value="80" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".15" />
                         </div>
                         <div class="widget-detail-1 text-end">
                             <h2 class="fw-normal pt-2 mb-1"> 4569 </h2>
@@ -84,12 +81,12 @@
                     <div class="table-responsive">
                         <table class="table table-hover mb-0">
                             <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Nama Konten</th>
-                                <th>Tanggal Buat</th>
-                                <th>Status</th>
-                            </tr>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nama Konten</th>
+                                    <th>Tanggal Buat</th>
+                                    <th>Status</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -104,22 +101,22 @@
                                     <td>01/01/2017</td>
                                     <td>26/04/2017</td>
                                 </tr>
-                                    <td>6</td>
-                                    <td>Adminto Admin v1.3</td>
-                                    <td>01/01/2017</td>
-                                    <td>31/05/2017</td>
+                                <td>6</td>
+                                <td>Adminto Admin v1.3</td>
+                                <td>01/01/2017</td>
+                                <td>31/05/2017</td>
                                 </tr>
 
                             </tbody>
                         </table>
                     </div>
-                </div> 
+                </div>
             </div>
-           
+
         </div><!-- end col -->
 
     </div>
-    <!-- end row -->       
-    
+    <!-- end row -->
+
 </div> <!-- container-fluid -->
 @endsection

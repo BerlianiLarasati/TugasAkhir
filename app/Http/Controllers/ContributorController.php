@@ -12,4 +12,10 @@ class ContributorController extends Controller
     public function destinasi() {
         return view('contributor.page.destinasi');
     }
+    public function create_destinasi() {
+        return view('contributor.page.create_destinasi');
+    }
+    public function edit_destinasi() {
+        return view('contributor.page.edit_destinasi');
+    }
 }
