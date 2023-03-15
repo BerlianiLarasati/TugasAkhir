@@ -30,6 +30,10 @@ Route::get('/umkm', function () {
     return view('umkm');
 })->name('umkm');
 
+Route::get('/umkm-detail', function () {
+    return view('umkm-detail');
+})->name('umkm-detail');
+
 Route::get('/registrasi', function () {
     return view('register');
 })->name('register');
