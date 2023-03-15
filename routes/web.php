@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\ContributorController;
+use App\Http\Controllers\UmkmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,7 @@ Route::get('/destinasi', function () {
     return view('destinasi');
 })->name('destinasi');
 
-Route::get('/umkm', function () {
-    return view('umkm');
-})->name('umkm');
+Route::get('/umkm', [UmkmController::class,"index"])->name('umkm');
 
 Route::get('/registrasi', function () {
     return view('register');
