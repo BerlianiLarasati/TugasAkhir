@@ -62,22 +62,36 @@ Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
 });
 
 
-
-
-// untuk pegawai
+// untuk Contributor
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor', [ContributorController::class, 'index']);
 
 });
+
+// untuk Destinasi Contributor
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor/destinasi', [ContributorController::class, 'destinasi'])->name('Cdestinasi');
 });
+
+// Create Destinasi Contributor
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor/destinasi/create_destinasi', [ContributorController::class, 'create_destinasi'])->name('Cdestinasi_create');
 });
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
-    Route::get('/contributor/destinasi/edit_destinasi', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi_create');
+    Route::post('/contributor/destinasi/insert_destinasi', [ContributorController::class, 'insert_destinasi'])->name('Cdestinasi_insert');
 });
+
+// Edit Destinasi Contributor
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::get('/contributor/destinasi/edit_destinasi', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi');
+});
+
+Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
+    Route::get('/contributor/destinasi/edit_destinasi/{id}', [ContributorController::class, 'update_destinasi'])->name('Edestinasi_edit');
+});
+// CRUD Contributor
+
+
 
 // untuk umkm
 Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
