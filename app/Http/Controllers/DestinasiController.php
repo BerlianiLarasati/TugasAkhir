@@ -15,9 +15,10 @@ class DestinasiController extends Controller
     public function index()
     {
         $destinasi = Destinasi::latest()->get();
-        return response()->json([
-            'data' => $destinasi
-        ]);
+        // return response()->json([
+        //     'data' => $destinasi
+        // ]);
+        return view('destinasi.index', compact('destinasi'));
     }
 
     /**
@@ -61,13 +62,9 @@ class DestinasiController extends Controller
             $destinasi->gambar = $image->hashName();
             $destinasi->save();
     
-            return response()->json([
-                'data' => $destinasi
-            ]);
+            return redirect()->route('destinasi.index')->with('success', 'Data berhasil disimpan');
         } else {
-            return response()->json([
-                'message' => 'Please provide both image and video files'
-            ], 400);
+            return redirect()->back()->with('error', 'Silahkan berikan kedua file gambar dan video')->withInput();
         }
     }
 
@@ -80,9 +77,7 @@ class DestinasiController extends Controller
     public function show($id)
     {
         $destinasi = Destinasi::find($id);
-        return response()->json([
-            'data' => $destinasi
-        ]);
+        return view('destinasi.show', compact('destinasi'));
     }
 
     /**
@@ -104,14 +99,14 @@ class DestinasiController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-{
-    $validatedData = $request->validate([
-        'nama' => 'required',
-        'alamat' => 'required',
-        'deskripsi' => 'required',
-        'wilayah' => 'required',
-        'kategori' => 'required',
-    ]);
+    {
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'alamat' => 'required',
+            'deskripsi' => 'required',
+            'wilayah' => 'required',
+            'kategori' => 'required',
+        ]);
         $destinasi = Destinasi::find($id);
         $destinasi->nama = $request->nama;
         $destinasi->alamat = $request->alamat;
@@ -120,10 +115,8 @@ class DestinasiController extends Controller
         $destinasi->kategori = $request->kategori;
         $destinasi->save();
 
-        return response()->json([
-            'data' => $destinasi
-        ]);
-}
+        return view('destinasi.update', compact('destinasi'));
+    }
 
 
     /**
@@ -136,8 +129,7 @@ class DestinasiController extends Controller
     {
         $destinasi = Destinasi::findOrFail($id);
         $destinasi->delete();
-        return response()->json([
-            'message' => 'Data berhasil dihapus'
-        ]);
+        return redirect()->back()->with('success', 'Data berhasil dihapus');
     }
+    
 }

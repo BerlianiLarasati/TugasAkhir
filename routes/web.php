@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DestinasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,11 @@ Route::get('/destinasi', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+
+// route destination
+Route::get('/destination',[DestinasiController::class, 'index']);
+Route::get('/destination/{id}',[DestinasiController::class, 'show']);
+Route::post('/destination',[DestinasiController::class, 'store']);
+Route::put('/destination/{id}',[DestinasiController::class, 'update']);
+Route::delete('/destination/{id}',[DestinasiController::class, 'destroy']);
