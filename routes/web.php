@@ -78,3 +78,8 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor/destinasi/edit_destinasi', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi_create');
 });
+
+// untuk umkm
+Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
+    Route::get('/contributor/umkm', [ContributorController::class, 'umkm'])->name('Cumkm');
+});

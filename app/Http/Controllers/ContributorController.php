@@ -18,4 +18,7 @@ class ContributorController extends Controller
     public function edit_destinasi() {
         return view('contributor.page.edit_destinasi');
     }
+    public function umkm() {
+        return view('contributor.page.umkm');
+    }
 }

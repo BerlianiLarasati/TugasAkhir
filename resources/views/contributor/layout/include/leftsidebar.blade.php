@@ -58,7 +58,7 @@
                                 <a href="{{route('Cdestinasi')}}">Destinasi</a>
                             </li>
                             <li>
-                                <a href="task-details.html">UMKM</a>
+                                <a href="{{route('Cumkm')}}">UMKM</a>
                             </li>
                         </ul>
                     </div>
