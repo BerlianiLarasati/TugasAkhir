@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\ContributorController;
+use App\Http\Controllers\DestinasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +68,11 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor', [ContributorController::class, 'index']);
 
 });
+
+
+// route destination
+Route::get('/destination',[DestinasiController::class, 'index']);
+Route::get('/destination/{id}',[DestinasiController::class, 'show']);
+Route::post('/destination',[DestinasiController::class, 'store']);
+Route::put('/destination/{id}',[DestinasiController::class, 'update']);
+Route::delete('/destination/{id}',[DestinasiController::class, 'destroy']);

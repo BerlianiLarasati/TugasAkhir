@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Destination;
+use App\Models\Image;
 
 class DestinationControoller extends Controller
 {
@@ -48,6 +49,10 @@ class DestinationControoller extends Controller
         $destinations->user_id = $request->user_id;
         $destinations->save();
 
+        $image = new Image();
+        $image->image_url = $request->image_url;
+        $image->save();
+
         return response()->json([
             'data' => $destinations
         ]);
@@ -68,7 +73,11 @@ class DestinationControoller extends Controller
      */
     public function show($id)
     {
-        //
+        $destinations = Destination::find($id);
+
+        return response()->json([
+            'data' => $destinations
+        ]);
     }
 
     /**
@@ -91,7 +100,19 @@ class DestinationControoller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $destinations = Destination::find($id);
+
+        $destinations->name = $request->name;
+        $destinations->address = $request->address;
+        $destinations->address_url = $request->address_url;
+        $destinations->description = $request->description;
+        $destinations->area_id = $request->area_id;
+        $destinations->user_id = $request->user_id;
+        $destinations->save();
+
+        return response()->json([
+            'data' => $destinations
+        ]);
     }
 
     /**
@@ -102,6 +123,11 @@ class DestinationControoller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $destinations = Destinations::findOrFail($id);
+        $destinations->delete();
+        
+        return response()->json([
+            'message' => 'Destinations deleted'
+        ]);
     }
 }

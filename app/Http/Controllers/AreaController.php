@@ -56,7 +56,10 @@ class AreaController extends Controller
      */
     public function show($id)
     {
-        //
+        $area = Area::find($id);
+        return response()->json([
+            'data' => $area
+        ]);
     }
 
 
@@ -80,7 +83,13 @@ class AreaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $area = Area::find($id);
+        $area->name = $request->name;
+        $area->save();
+
+        return response()->json([
+            'data' => $area
+        ]);
     }
 
     /**
@@ -91,6 +100,11 @@ class AreaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $area = Area::findOrFail($id);
+        $area->delete();
+        
+        return response()->json([
+            'message' => 'Area deleted'
+        ]);
     }
 }
