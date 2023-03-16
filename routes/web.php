@@ -36,6 +36,9 @@ Route::get('/registrasi', function () {
 Route::get('/beranda', function () {
     return view('index');
 });
+Route::get('/register', function () {
+    return view('register');
+});
 Route::get('/wkwkwk/coba', function () {
     return view('contributor.coba.coba');
 });
