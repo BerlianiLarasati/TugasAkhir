@@ -4,17 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Destination extends Model
 {
     use HasFactory;
     protected $fillable=[
+        'id',
         'name',
         'address',
-        'address_url',
         'description',
-        'area_id',
-        'user_id'
+        'category_id', 
+        'area_id'
     ];
 
     public function area()
@@ -25,5 +26,9 @@ class Destination extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\ContributorController;
+use App\Http\Controllers\UmkmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,7 @@ Route::get('/destinasi', function () {
     return view('destinasi');
 })->name('destinasi');
 
-Route::get('/umkm', function () {
-    return view('umkm');
-})->name('umkm');
+Route::get('/umkm', [UmkmController::class,"index"])->name('umkm');
 
 Route::get('/umkm-detail', function () {
     return view('umkm-detail');
@@ -65,8 +64,39 @@ Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
     Route::get('/superadmin', [SuperadminController::class, 'index']);
 });
 
-// untuk pegawai
+
+// untuk Contributor
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
     Route::get('/contributor', [ContributorController::class, 'index']);
 
+});
+
+// untuk Destinasi Contributor
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::get('/contributor/destinasi', [ContributorController::class, 'destinasi'])->name('Cdestinasi');
+});
+
+// Create Destinasi Contributor
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::get('/contributor/destinasi/create_destinasi', [ContributorController::class, 'create_destinasi'])->name('Cdestinasi_create');
+});
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::post('/contributor/destinasi/insert_destinasi', [ContributorController::class, 'insert_destinasi'])->name('Cdestinasi_insert');
+});
+
+// Edit Destinasi Contributor
+Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
+    Route::get('/contributor/destinasi/edit_destinasi', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi');
+});
+
+Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
+    Route::get('/contributor/destinasi/edit_destinasi/{id}', [ContributorController::class, 'update_destinasi'])->name('Edestinasi_edit');
+});
+// CRUD Contributor
+
+
+
+// untuk umkm
+Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
+    Route::get('/contributor/umkm', [ContributorController::class, 'umkm'])->name('Cumkm');
 });
