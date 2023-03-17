@@ -13,7 +13,7 @@ class ContributorController extends Controller
     public function destinasi() {
         $data = Destination::all();
         return view('contributor.page.destinasi',compact('data'));
-        // Destinasi::where('user_id', Auth::user()->id)->get(); 
+        //Destination::where('user_id', Auth::user()->id)->get(); 
     }
     public function create_destinasi() {
         return view('contributor.page.create_destinasi');

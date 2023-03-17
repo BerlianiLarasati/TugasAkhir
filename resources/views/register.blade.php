@@ -1,9 +1,5 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -29,7 +25,7 @@
                 <div class="input-group"><input type="date" placeholder="Date" name="date" required></div>
                 <button class="button" style="vertical-align:middle"><span> Register </span></button>
                 <p class="register-text">Already Have an Account?
-                <a href="/login">Log In!</a></p>
+                <a href="{{ route('login') }}">Log In!</a></p>
             </form>
     </div>
 

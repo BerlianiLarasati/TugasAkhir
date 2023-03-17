@@ -47,7 +47,7 @@
                                     {{-- <td>{{ $no++ }}</td> --}}
                                     <td scope="rom">{{ $destinasi->id }}</td>
                                     <td>{{ $destinasi->name }}</td>
-                                    <td>{{ $destinasi->category_id }}</td>
+                                    <td>{{ $destinasi->category_id}}</td>
                                     <td>{{ $destinasi->address }}</td>
                                     <td>{{ $destinasi->area_id }}</td>
                                     <td>Gambar</td>
