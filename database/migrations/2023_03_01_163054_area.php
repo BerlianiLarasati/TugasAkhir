@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Destinasi extends Migration
+class Area extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class Destinasi extends Migration
      */
     public function up()
     {
-        Schema::create('destinasis', function (Blueprint $table) {
+        Schema::create('areas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('alamat');
-            $table->string('deskripsi');
-            $table->string('wilayah');
-            $table->string('kategori');
-            $table->string('gambar');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class Destinasi extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('destinasis');
+        Schema::dropIfExists('areas');
     }
 }
