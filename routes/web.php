@@ -21,3 +21,7 @@ Route::get('/destinasi', function () {
     return view('destinasi');
 });
 
+Route::get('/destinasi-detail', function () {
+    return view('destinasi-detail');
+});
+
