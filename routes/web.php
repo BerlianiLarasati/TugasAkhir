@@ -26,6 +26,10 @@ Route::get('/destinasi', function () {
     return view('destinasi');
 })->name('destinasi');
 
+Route::get('/destinasi-detail', function () {
+    return view('destinasi-detail');
+})->name('destinasi-detail');
+
 Route::get('/umkm', function () {
     return view('umkm');
 })->name('umkm');
@@ -45,9 +49,6 @@ Route::get('/wkwkwk/coba', function () {
     return view('contributor.coba.coba');
 });
 
-Route::get('/destinasi-detail', function () {
-    return view('destinasi-detail');
-});
 
 //  jika user belum login
 Route::group(['middleware' => 'guest'], function() {

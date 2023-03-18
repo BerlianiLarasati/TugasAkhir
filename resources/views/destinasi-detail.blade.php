@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Destinasi</title>
-    <link rel="stylesheet" href="{{asset('stylesheet.css')}}" />
+@extends('layout.navfoot')
+@section('section')
 
-    <!--Icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
-<body>
-    <div class="navigasi">
-        <img
-          src="https://tourism.surabaya.go.id/assets/front/images/img-logo-sparkling.png"
-          alt=""
-        />
-        <div class="menuDestinasi">
-          <a href="">BERANDA</a>
-          <a href="">DESTINASI</a>
-          <a href="">UMKM</a>
-          <a href="">LOGIN</a>
-        </div>
-    </div>
-
-    <div class="desc">
+   <div class="desc">
         <div class="namepage">
             <a href="">Beranda > Destinasi Wisata</a>
             <h1>MUSEUM PENDIDIKAN SURABAYA</h1>
@@ -54,5 +29,5 @@
         <p>ZONA KOLONIAL Pada Pendidikan masa ini menceritakan tentang Pendidikan era Kolonial Belanda dan Jepang. Koleksi terkait zona Kolonial ini meliputi Sepeda Guru. Sepeda Zundapp untuk pendampingan Orang tua mengantar siswa berangkat Sekolah dsb.</p>
         <p>ZONA KEMERDEKAAN. Pada Zona Kemerdekaan ini menampilkan Koleksi –koleksi terkait benda bukti materiil peradaban periodisasi tahun 1945 – 1990an.</p>
     </div>
-</body>
-</html>
+
+ @endsection
