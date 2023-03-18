@@ -77,7 +77,7 @@
                 <button type="submit" class="btn btn-success waves-effect waves-light">Submit</button>
             </div>
             <div class="col-8 col-sm-1">
-                <a type="submit" href="{{route('Cdestinasi')}}" class="btn btn-danger waves-effect waves-light">Kembali</a>
+                <a type="submit" href="{{route('Sdestinasi')}}" class="btn btn-danger waves-effect waves-light">Kembali</a>
             </div>
         </div>
     </form>

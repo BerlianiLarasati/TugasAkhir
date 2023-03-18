@@ -17,7 +17,7 @@
                         </div>
                         <div class="col-sm-10">
 
-                            <a class="btn btn-sm btn-success waves-effect waves-light" href="{{route('Cdestinasi_create')}}">
+                            <a class="btn btn-sm btn-success waves-effect waves-light" href="{{route('Sdestinasi_create')}}">
                                 + Tambah Destinasi
                             </a>
 
