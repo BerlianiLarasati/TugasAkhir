@@ -28,10 +28,12 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Nama Destinasi</th>
+                                <th>Nama Produk</th>
                                 <th>Kategori</th>
+                                <th>Nama Toko</th>
                                 <th>Alamat</th>
-                                <th>Wilayah</th>
+                                <th>Kontak</th>
+                                <th>Online Shop</th>
                                 <th>Gambar</th>
                                 <th>Deskripsi</th>
                                 <th class="tabledit-toolbar-column">Aksi</th>
@@ -41,28 +43,32 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>MASJID NASIONAL AL-AKBAR SURABAYA</td>
-                                <td>Religi</td>
-                                <td>Jl. Genteng Kali No. 10</td>
-                                <td>Surabaya Pusat</td>
+                                <td>Batik Tulis</td>
+                                <td>Fashion</td>
+                                <td>Batik Tulis Jarak Arum</td>
+                                <td>Kupang Gunung Jaya IX/9 Kecamatan Sawahan</td>
+                                <td>082131394619</td>
+                                <td>https://shopee.co.id/aqisarosella10</td>
                                 <td>Gambar</td>
-                                <td>Masjid Nasional Al Akbar atau biasa disebut Masjid Agung Surabaya terbesar di Surabaya memiliki ciri yang mudah dilihat adalah kubahnya yang besar didampingi 4 kubah kecil yang berwarna biru. Serta memiliki satu menara yang tingginya 99 meter dengan lift yang dapat digunakan pengunjung untuk melihat pemandangan Surabaya. Masjid ini dibangun pada tahun 1995 dan dapat menampung hingga 25.000 jamaah. </td>
+                                <td>UMKM Batik Tulis Jarak Arum memproduksi batik tulis berupa kain dan baju jadi.</td>
                                 <td style="white-space: nowrap; width: 1%;">
-                                    <a class="btn btn-warning width-xs waves-effect waves-light" href="{{route('Edestinasi_create')}}">
+                                    <a class="btn btn-warning width-xs waves-effect waves-light" href="#">
                                         Edit
                                     </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>MASJID NASIONAL AL-AKBAR SURABAYA</td>
-                                <td>Religi</td>
-                                <td>Jl. Genteng Kali No. 10</td>
-                                <td>Surabaya Pusat</td>
+                                <td>Batik Tulis</td>
+                                <td>Fashion</td>
+                                <td>Batik Tulis Jarak Arum</td>
+                                <td>Kupang Gunung Jaya IX/9 Kecamatan Sawahan</td>
+                                <td>082131394619</td>
+                                <td>https://shopee.co.id/aqisarosella10</td>
                                 <td>Gambar</td>
-                                <td>Masjid Nasional Al Akbar atau biasa disebut Masjid Agung Surabaya terbesar di Surabaya memiliki ciri yang mudah dilihat adalah kubahnya yang besar didampingi 4 kubah kecil yang berwarna biru. Serta memiliki satu menara yang tingginya 99 meter dengan lift yang dapat digunakan pengunjung untuk melihat pemandangan Surabaya. Masjid ini dibangun pada tahun 1995 dan dapat menampung hingga 25.000 jamaah. </td>
+                                <td>UMKM Batik Tulis Jarak Arum memproduksi batik tulis berupa kain dan baju jadi.</td>
                                 <td style="white-space: nowrap; width: 1%;">
-                                    <a class="btn btn-warning width-xs waves-effect waves-light" href="{{route('Cumkm')}}">
+                                    <a class="btn btn-warning width-xs waves-effect waves-light" href="#">
                                         Edit
                                     </a>
                                 </td>
