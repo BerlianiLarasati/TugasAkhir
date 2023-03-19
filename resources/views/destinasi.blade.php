@@ -48,7 +48,11 @@
                   alt=""
                 />
                 <div class="desc">
+<<<<<<< HEAD
                     <a href="{{route('destinasi-detail')}}">Museum</a>
+=======
+                    <a href="#">Museum</a>
+>>>>>>> Althea
                     <h5>Museum Pendidikan Surabaya</h5>
                     <h6>Jl. Genteng Kali No. 10</h6>
                 </div>   

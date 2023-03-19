@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,14 +9,14 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/surabaya-logo.png">
+        <link rel="shortcut icon" href="{{asset('')}}assets/images/surabaya-logo.png">
 
         <!-- App css -->
 
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
+        <link href="{{asset('')}}assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
         <!-- icons -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{asset('')}}assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -34,7 +33,7 @@
     
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
+                                <img src="{{asset('')}}assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ms-1">
                                     Super Admin <i class="mdi mdi-chevron-down"></i> 
                                 </span>
@@ -63,18 +62,18 @@
                     <div class="logo-box">
                         <a href="index.html" class="logo logo-light text-center">
                             <span class="logo-sm">
-                                <img src="assets/images/surabaya-logo.png" alt="" height="30">
+                                <img src="{{asset('')}}assets/images/surabaya-logo.png" alt="" height="30">
                             </span>
                             <span class="logo-lg">
-                                <img src="assets/images/surabaya-logo.png" alt="" height="16">
+                                <img src="{{asset('')}}assets/images/surabaya-logo.png" alt="" height="16">
                             </span>
                         </a>
                         <a href="index.html" class="logo logo-dark text-center">
                             <span class="logo-sm">
-                                <img src="assets/images/surabaya-logo.png" alt="" height="22">
+                                <img src="{{asset('')}}assets/images/surabaya-logo.png" alt="" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="assets/images/surabaya-logo.png" alt="" height="16">
+                                <img src="{{asset('')}}assets/images/surabaya-logo.png" alt="" height="16">
                             </span>
                         </a>
                     </div>
@@ -105,7 +104,7 @@
                      <!-- User box -->
                     <div class="user-box text-center">
 
-                        <img src="assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-thumbnail avatar-md">
+                        <img src="{{asset('')}}assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle img-thumbnail avatar-md">
 
                         <p class="text-muted left-user-info">Super Admin</p>
 
@@ -576,26 +575,26 @@
         <div class="rightbar-overlay"></div>
 
         <!-- Vendor -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-        <script src="assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <script src="{{asset('')}}assets/libs/jquery/jquery.min.js"></script>
+        <script src="{{asset('')}}assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="{{asset('')}}assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="{{asset('')}}assets/libs/node-waves/waves.min.js"></script>
+        <script src="{{asset('')}}assets/libs/waypoints/lib/jquery.waypoints.min.js"></script>
+        <script src="{{asset('')}}assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
+        <script src="{{asset('')}}assets/libs/feather-icons/feather.min.js"></script>
 
         <!-- knob plugin -->
-        <script src="assets/libs/jquery-knob/jquery.knob.min.js"></script>
+        <script src="{{asset('')}}assets/libs/jquery-knob/jquery.knob.min.js"></script>
 
         <!--Morris Chart-->
-        <script src="assets/libs/morris.js06/morris.min.js"></script>
-        <script src="assets/libs/raphael/raphael.min.js"></script>
+        <script src="{{asset('')}}assets/libs/morris.js06/morris.min.js"></script>
+        <script src="{{asset('')}}assets/libs/raphael/raphael.min.js"></script>
   
         <!-- Dashboar init js-->
-        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="{{asset('')}}assets/js/pages/dashboard.init.js"></script>
 
         <!-- App js-->
-        <script src="assets/js/app.min.js"></script>
+        <script src="{{asset('')}}assets/js/app.min.js"></script>
         
     </body>
 </html>
