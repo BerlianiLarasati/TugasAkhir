@@ -61,31 +61,47 @@ Route::group(['middleware' => ['auth', 'checkrole:1,2']], function() {
 
 // untuk superadmin
 Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
-    Route::get('/superadmin', [ContributorController::class, 'index']);
+    Route::get('/superadmin', [SuperadminController::class, 'index']);
 
 });
 
 // untuk Destinasi Superadmin
-Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
-    Route::get('/superadmin/destinasi', [ContributorController::class, 'destinasi'])->name('Cdestinasi');
+Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
+    Route::get('/superadmin/destinasi', [SuperadminController::class, 'destinasi'])->name('Sdestinasi');
 });
 
 // Create Destinasi Superadmin
-Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
-    Route::get('/contributor/destinasi/create_destinasi', [ContributorController::class, 'create_destinasi'])->name('Cdestinasi_create');
+Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
+    Route::get('/superadmin/destinasi/create_destinasi', [SuperadminController::class, 'create_destinasi'])->name('Sdestinasi_create');
 });
-Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
-    Route::post('/contributor/destinasi/insert_destinasi', [ContributorController::class, 'insert_destinasi'])->name('Cdestinasi_insert');
+Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
+    Route::post('/superadmin/destinasi/insert_destinasi', [SuperadminController::class, 'insert_destinasi'])->name('Sdestinasi_insert');
 });
 
 // Edit Destinasi Superadmin
-Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
-    Route::get('/contributor/destinasi/edit_destinasi', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi');
+Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
+    Route::get('/superadmin/destinasi/edit_destinasi', [SuperadminController::class, 'edit_destinasi'])->name('Edestinasi');
 });
 
-Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
-    Route::get('/contributor/destinasi/edit_destinasi/{id}', [ContributorController::class, 'update_destinasi'])->name('Edestinasi_edit');
+Route::group(['middleware' => ['auth', 'checkrole:1']], function () {
+    Route::get('/superadmin/destinasi/edit_destinasi/{id}', [SuperadminController::class, 'update_destinasi'])->name('Edestinasi_edit');
 });
+
+// Delete Destinasi Superadmin
+Route::group(['middleware' => ['auth', 'checkrole:1']], function() {
+    Route::get('/superadmin/destinasi/edit_destinasi', [SuperadminController::class, 'edit_destinasi'])->name('Edestinasi');
+});
+
+Route::group(['middleware' => ['auth', 'checkrole:1']], function () {
+    Route::get('/superadmin/destinasi/edit_destinasi/{id}', [SuperadminController::class, 'update_destinasi'])->name('Edestinasi_edit');
+});
+
+// UMKM Superadmin
+Route::group(['middleware' => ['auth', 'checkrole:1']], function () {
+    Route::get('/superadmin/umkm', [SuperadminController::class, 'umkm'])->name('Sumkm');
+});
+
+
 
 // untuk Contributor
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {

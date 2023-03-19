@@ -1,4 +1,4 @@
-@extends('contributor.layout.master')
+{{-- @extends('contributor.layout.master')
 
 @section('judul')
 <li>
@@ -119,4 +119,4 @@
     <!-- end row -->
 
 </div> <!-- container-fluid -->
-@endsection
+@endsection --}}

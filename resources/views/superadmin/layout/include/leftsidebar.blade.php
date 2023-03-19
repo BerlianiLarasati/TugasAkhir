@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <p class="text-muted left-user-info">Contributor</p>
+            <p class="text-muted left-user-info">Admin</p>
 
             <ul class="list-inline">
                 <li class="list-inline-item">
@@ -55,10 +55,10 @@
                     <div class="collapse" id="sidebarTasks">
                         <ul class="nav-second-level">
                             <li>
-                                <a href="{{route('Cdestinasi')}}">Destinasi</a>
+                                <a href="{{route('Sdestinasi')}}">Destinasi</a>
                             </li>
                             <li>
-                                <a href="{{route('Cumkm')}}">UMKM</a>
+                                <a href="{{route('Sumkm')}}">UMKM</a>
                             </li>
                         </ul>
                     </div>

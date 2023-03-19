@@ -10,7 +10,7 @@
 
     <h4 class="mb-3 header-title">Tambah Data Destinasi</h4>
 
-    <form class="form-horizontal" action="{{route('Cdestinasi_insert')}}" method="POST" enctype="multipart/form-data">
+    <form class="form-horizontal" action="{{route('Sdestinasi_insert')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row mb-3">
             <label for="inputEmail3" class="col-4 col-xl-3 col-form-label">Nama Destinasi</label>
@@ -78,7 +78,7 @@
                 <button type="submit" class="btn btn-success waves-effect waves-light">Submit</button>
             </div>
             <div class="col-8 col-sm-1">
-                <a type="submit" href="{{route('Cdestinasi')}}" class="btn btn-danger waves-effect waves-light">Kembali</a>
+                <a type="submit" href="{{route('Sdestinasi')}}" class="btn btn-danger waves-effect waves-light">Kembali</a>
             </div>
         </div>
     </form>

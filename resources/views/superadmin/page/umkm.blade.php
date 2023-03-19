@@ -17,7 +17,7 @@
                         </div>
                         <div class="col-sm-10">
 
-                            <a class="btn btn-sm btn-success waves-effect waves-light" href="{{route('Cdestinasi_create')}}">
+                            <a class="btn btn-sm btn-success waves-effect waves-light" href="{{route('Sdestinasi_create')}}">
                                 + Tambah Destinasi
                             </a>
 
@@ -62,7 +62,7 @@
                                 <td>Gambar</td>
                                 <td>Masjid Nasional Al Akbar atau biasa disebut Masjid Agung Surabaya terbesar di Surabaya memiliki ciri yang mudah dilihat adalah kubahnya yang besar didampingi 4 kubah kecil yang berwarna biru. Serta memiliki satu menara yang tingginya 99 meter dengan lift yang dapat digunakan pengunjung untuk melihat pemandangan Surabaya. Masjid ini dibangun pada tahun 1995 dan dapat menampung hingga 25.000 jamaah. </td>
                                 <td style="white-space: nowrap; width: 1%;">
-                                    <a class="btn btn-warning width-xs waves-effect waves-light" href="{{route('Cumkm')}}">
+                                    <a class="btn btn-warning width-xs waves-effect waves-light" href="{{route('Sumkm')}}">
                                         Edit
                                     </a>
                                 </td>
