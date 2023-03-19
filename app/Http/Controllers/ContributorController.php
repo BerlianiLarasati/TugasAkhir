@@ -26,8 +26,9 @@ class ContributorController extends Controller
 
 
 
-    public function edit_destinasi() {
-        return view('contributor.page.edit_destinasi');
+    public function edit_destinasi($id) {
+        $destinasi=Destination::find($id);
+        return view('contributor.page.edit_destinasi', ['destination'=>$destinasi]);
     }
     public function update_destinasi($id) {
         $data = Destination::find($id);

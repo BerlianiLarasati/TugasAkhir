@@ -82,11 +82,11 @@ Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
 
 // Edit Destinasi Contributor
 Route::group(['middleware' => ['auth', 'checkrole:2']], function() {
-    Route::get('/contributor/destinasi/edit_destinasi', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi');
+    Route::get('/contributor/destinasi/edit_destinasi/{id}', [ContributorController::class, 'edit_destinasi'])->name('Edestinasi');
 });
 
 Route::group(['middleware' => ['auth', 'checkrole:2']], function () {
-    Route::get('/contributor/destinasi/edit_destinasi/{id}', [ContributorController::class, 'update_destinasi'])->name('Edestinasi_edit');
+    Route::put('/contributor/destinasi/edit_destinasi/{id}', [ContributorController::class, 'update_destinasi'])->name('Edestinasi_edit');
 });
 // CRUD Contributor
 

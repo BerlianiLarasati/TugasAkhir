@@ -53,7 +53,7 @@
                                     <td>Gambar</td>
                                     <td>{{ $destinasi->description }}</td>
                                     <td style="white-space: nowrap; width: 1%;">
-                                        <a class="btn btn-warning width-xs waves-effect waves-light" href="/'Edestinasi_edit/{id}">
+                                        <a class="btn btn-warning width-xs waves-effect waves-light" href="{{route('Edestinasi', ['id'=>$destinasi->id])}}">
                                             Edit
                                         </a>
                                     </td>
