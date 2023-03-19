@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -54,7 +55,7 @@ class AuthController extends Controller
         User::create([
             'name' => $request->username, 
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => Hash::make($request->password),
         ]);
         return redirect()->route('login');
     }
