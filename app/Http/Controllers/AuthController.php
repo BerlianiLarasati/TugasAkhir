@@ -44,4 +44,18 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
+
+    public function register(){
+        return view('register');
+    }
+
+    public function doRegistrasi(Request $request){
+        // return $request;
+        User::create([
+            'name' => $request->username, 
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+        return redirect()->route('login');
+    }
 }

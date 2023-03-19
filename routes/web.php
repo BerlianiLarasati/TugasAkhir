@@ -29,10 +29,6 @@ Route::get('/destinasi', function () {
 
 Route::get('/umkm', [UmkmController::class,"index"])->name('umkm');
 
-Route::get('/registrasi', function () {
-    return view('register');
-})->name('register');
-
 Route::get('/beranda', function () {
     return view('index');
 });
@@ -45,7 +41,8 @@ Route::get('/wkwkwk/coba', function () {
 Route::group(['middleware' => 'guest'], function() {
     Route::get('/masuk', [AuthController::class, 'login'])->name('login');
     Route::post('/', [AuthController::class, 'dologin']);
-
+    Route::get('/registrasi', [AuthController::class,"register"])->name('register');
+    Route::post('/register', [AuthController::class, 'doRegistrasi'])->name('registration');
 });
 
 // untuk superadmin dan pegawai

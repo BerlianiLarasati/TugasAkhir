@@ -14,14 +14,14 @@
     <body>
     
     <div class="container">
-            <form action="" method="POST" class="register-email">
+            <form action="{{route('registration')}}" method="POST" class="register-email">
+                @csrf
                 <div class="logo">
                     <img src="https://tourism.surabaya.go.id/assets/front/images/img-logo-sparkling.png" alt="" />
                 <p class="title-text"><b>REGISTER</b></p>
                 <div class="input-group"><input type="text" placeholder="Name" name="username" value="" required></div>
                 <div class="input-group"><input type="email" placeholder="E-mail Adress" name="email" value="" required></div>
                 <div class="input-group"><input type="password" placeholder="Password" name="password" value="" required></div>
-                <div class="input-group"><input type="password" placeholder="Confirm Password" name="cpassword" value= "" required></div>
                 <div class="input-group"><input type="date" placeholder="Date" name="date" required></div>
                 <button class="button" style="vertical-align:middle"><span> Register </span></button>
                 <p class="register-text">Already Have an Account?
