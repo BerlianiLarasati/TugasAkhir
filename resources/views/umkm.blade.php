@@ -18,14 +18,14 @@
     <div class="grid">
         @foreach ($products as $product)
         <div class="col">
-            <a href="{{route("umkm-detail")}}">
+            <a href="{{route("umkm-detail", ['id' => $product['id']])}}">
                 <div class="img-container">
                     <img src="https://lh3.googleusercontent.com/p/AF1QipNA3g8VUZlf8uIr9ldG59Lp0Gu0hQh2RHwKuKqp=s1280-p-no-v1" alt="">
                 </div>
-                <div class="label">Food & Beverages</div>
+                <div class="label">{{$product->category_id}}</div>
                 <h3 style="margin: 10px 0px">{{$product->nama}}</h3>
                 <i class="fas fa-store"></i>
-                <span>Aqisa Rumah Rosella</span>
+                <span>{{$product->shop_name}}</span>
             </a>
         </div>
         @endforeach

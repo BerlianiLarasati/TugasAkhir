@@ -15,4 +15,13 @@ class UmkmController extends Controller
         // $data= Umkm::all();
         return view('umkm', ['products'=>$data] );
     }
+
+    public function detail(Request $request) {
+        // menghasilkan data seperti tadi dari return dimasukin ke dolar data
+        // ya ini ngambil nama seperti di search trus di get
+        $data= Umkm::where('nama', 'like', "%" . $request->search . "%")->get();
+        // return $data; 
+        // $data= Umkm::all();
+        return view('umkm-detail', ['products'=>$data] );
+    }
 }

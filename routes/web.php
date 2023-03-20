@@ -5,7 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\ContributorController;
+use App\Http\Controllers\UmkmCategoryController;
 use App\Http\Controllers\UmkmController;
+use App\Models\umkm_category;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +29,16 @@ Route::get('/destinasi', function () {
     return view('destinasi');
 })->name('destinasi');
 
+// Route::get('/umkm', [UmkmCategoryController::class,"index"])->name('umkmcategory');
+
 Route::get('/umkm', [UmkmController::class,"index"])->name('umkm');
 
-Route::get('/umkm-detail', function () {
-    return view('umkm-detail');
-})->name('umkm-detail');
+Route::get('/umkm-detail', [UmkmController::class,"detail"])->name('umkm-detail');
+
+
+// Route::get('/umkm-detail', function () {
+//     return view('umkm-detail');
+// })->name('umkm-detail');
 
 Route::get('/registrasi', function () {
     return view('register');
