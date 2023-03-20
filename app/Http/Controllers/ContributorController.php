@@ -41,4 +41,9 @@ class ContributorController extends Controller
     public function umkm() {
         return view('contributor.page.umkm');
     }
+
+    public function create_umkm()
+    {
+        return view('contributor.page.create_umkm');
+    }
 }
