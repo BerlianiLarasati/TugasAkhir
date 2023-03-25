@@ -29,6 +29,10 @@ Route::get('/destinasi', function () {
     return view('destinasi');
 })->name('destinasi');
 
+Route::get('/destinasi-detail', function () {
+    return view('destinasi-detail');
+})->name('destinasi-detail');
+
 // Route::get('/umkm', [UmkmCategoryController::class,"index"])->name('umkmcategory');
 
 Route::get('/umkm', [UmkmController::class,"index"])->name('umkm');
