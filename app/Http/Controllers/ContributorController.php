@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Destination;
+use App\Models\Umkm;
 
 class ContributorController extends Controller
 {
@@ -45,5 +46,44 @@ class ContributorController extends Controller
     public function create_umkm()
     {
         return view('contributor.page.create_umkm');
+    }
+
+
+
+    // contributor make umkm
+    public function insert_umkm(Request $request)
+    {
+        $validateData = $request->validate([
+            'nama' => 'required',
+            'address' => 'required',
+            'shop_name' => 'required',
+            'description' => 'required',
+            'contact' => 'required|numeric',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            $image->storeAs('public/umkm', $image->hashName());
+            
+            $umkm = new Umkm();
+            $umkm->nama = $request->nama;
+            $umkm->address = $request->address;
+            $umkm->shop_name = $request->shop_name;
+            $umkm->description = $request->description;
+            $umkm->contact = $request->contact;
+            $umkm->image = $image->hashName();
+
+            $umkm->save();
+
+
+            
+            // kirim ke view yang mana?
+
+        }else{
+            return response('Please provide both image and video files', 400);
+        }
+
     }
 }
