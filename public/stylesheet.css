@@ -56,7 +56,7 @@
     color:#007aff;
   }
   
-  .navigasi-home .menu-home ul li a.menu_list::after {
+  .navigasi-home .menu-home ul li a.menu__list::after {
     content: '';
     height: 3px;
     position: absolute;
@@ -72,9 +72,9 @@
     transition-timing-function: ease-out;
   }
   
-  .navigasi-home .menu-home ul li a.menu_list:hover::after,
-  .navigasi-home .menu-home ul li a.menu_list:focus:after,
-  .navigasi-home .menu-home ul li a.menu_list:active::after {
+  .navigasi-home .menu-home ul li a.menu__list:hover::after,
+  .navigasi-home .menu-home ul li a.menu__list:focus:after,
+  .navigasi-home .menu-home ul li a.menu__list:active::after {
     left: 0;
     right: auto;
     width: 100%;
@@ -355,71 +355,6 @@
     font-weight: bolder;
 }
 
-.slide-4 {
-    display: grid;
-    grid-template-columns: 350px 500px 350px;
-    justify-content: center;
-    justify-items: center;
-    margin: 50px 0 0 0;
-    padding: 50px 0 30px 0;
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/461/61/152/blue-purple-soft-gradation-wallpaper-preview.jpg);
-    background-size: cover;
-}
-
-.slide-4 h6 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    font-size: 18px;
-    margin: 0 0 20px;
-    color: white;
-}
-
-.slide-4 p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    font-size: 15px;
-    margin: 0 0 8px;
-    color: white;
-    font-weight: lighter;
-}
-
-.slide-4 .contactUs .sub-kontak {
-    display: flex;
-    flex-direction: row;
-}
-
-.slide-4 .findUs {
-    margin: 10px 0 10px 0;
-    padding: 0 10px 0 10px;
-}
-
-.slide-4 .contactUs {
-    margin: 10px 0 10px 0;
-    padding: 0 10px 0 10px;
-}
-
-.slide-4 .sites {
-    margin: 10px 0 10px 0;
-    padding: 0 10px 0 10px;
-}
-
-.slide-4 span {
-    font-size: 18px;
-    margin: 0px 10px 10px 0;
-    color: white;
-}
-
-.slide-4 a {
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: lighter;
-}
 
 /* -----------------------HALAMAN DESTINASI-------------------------------- */
 
@@ -444,7 +379,7 @@
       Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 14px;
     margin: 0px 10px;
-    padding: 10px;
+    padding: 0px 10px 0px 10px;
 }
 
 .navigasi .menu ul li {
@@ -469,7 +404,7 @@
     color:#007aff;
   }
   
-  .navigasi .menu ul li a.menu__list::after {
+  .navigasi .menu ul li a.menu_list::after {
     content: '';
     height: 3px;
     position: absolute;
@@ -484,9 +419,9 @@
     transition-timing-function: ease-out;
   }
   
-  .navigasi .menu ul li a.menu__list:hover::after,
-  .navigasi .menu ul li a.menu__list:focus:after,
-  .navigasi .menu ul li a.menu__list:active::after {
+  .navigasi .menu ul li a.menu_list:hover::after,
+  .navigasi .menu ul li a.menu_list:focus:after,
+  .navigasi .menu ul li a.menu_list:active::after {
     left: 0;
     right: auto;
     width: 100%;
@@ -611,13 +546,12 @@
 
 /* ---------------- footer starts here --------------------------- */
 .footer {
-    display: grid;
+    display: flex;
     grid-template-columns: 350px 500px 350px;
     justify-content: center;
     justify-items: center;
-    margin: 50px 0 0 0;
     padding: 50px 0 30px 0;
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/461/61/152/blue-purple-soft-gradation-wallpaper-preview.jpg);
+    background: rgb(74, 74, 138);
     background-size: cover;
 }
 
@@ -863,19 +797,12 @@
 
 
 /* -------------------------- RESPONSIVENESS --------------------------------------------- */
-@media screen and (min-width: 768px) { 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
+/* layar laptop */
+@media screen and (min-width: 769px) { 
+    .navigasi {
+        padding: 0 50px;
     }
-}
 
-@media screen and (min-width: 960px) { 
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 1200px) { 
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -884,6 +811,114 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* layar tablet */
+@media screen and (max-width: 820px) { 
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger  .line {
+        width: 30px;
+        height: 3px;
+        background:#6868ac;
+        margin: 6px 0;
+    }
+
+    .menu {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 1px 1px 10px #6868ac;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .menu.active {
+        height: 300px;
+    }
+
+    .menu ul {
+        display: block;
+        width: min-content;
+        margin: 80px auto 0 auto;
+        transition: 0.5s;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .menu.active ul {
+        opacity: 1;
+    }
+
+    .menu_list {
+        margin-bottom: 12px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* layar smartphone */
+@media screen and (max-width: 680px) { 
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger  .line {
+        width: 30px;
+        height: 3px;
+        background:#6868ac;
+        margin: 6px 0;
+    }
+
+    .menu {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 1px 1px 10px #6868ac;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .menu.active {
+        height: 450px;
+    }
+
+    .menu ul {
+        display: block;
+        width: min-content;
+        margin: 80px auto 0 auto;
+        transition: 0.5s;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .menu.active ul {
+        opacity: 1;
+    }
+
+    .menu_list {
+        margin-bottom: 12px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
 
 
 
