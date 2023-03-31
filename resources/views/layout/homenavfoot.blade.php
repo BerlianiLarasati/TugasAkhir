@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisata Surabaya</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/City_of_Surabaya_Logo.svg/1200px-City_of_Surabaya_Logo.svg.png">
     <link rel="stylesheet" href="{{asset('stylesheet.css')}}" />
@@ -47,9 +47,12 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" 
+    />
+
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" 
     />
   </head>
   <body>
@@ -97,14 +100,8 @@
           </div>
           <div class="budaya">
             <div class="sub-destinasi">
-              <span class="material-symbols-outlined"> temple_buddhist </span>
-              <a href="">CAGAR BUDAYA</a>
-            </div>
-          </div>
-          <div class="event">
-            <div class="sub-destinasi">
-              <span class="material-symbols-outlined"> campaign </span>
-              <a href="">EVENT SURABAYA</a>
+              <span class="material-symbols-outlined"> store </span>
+              <a href="">BISNIS UMKM</a>
             </div>
           </div>
           <div class="peta">
