@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('superadmin.layout.master')
 
 
 @push('css')
@@ -12,11 +12,11 @@
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="page-header">
-        <h3 class="page-title"> Edit Kuliner </h3>
+        <h3 class="page-title"> Edit UMKM </h3>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Forms</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Edit Kuliner</li>
+            <li class="breadcrumb-item active" aria-current="page">Edit UMKM</li>
           </ol>
         </nav>
       </div>

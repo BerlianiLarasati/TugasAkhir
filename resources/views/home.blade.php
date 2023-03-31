@@ -43,7 +43,7 @@
           <ul class="menuzord-menu menuzord-right">
             <li class="active"><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ route('destinasi') }}">Destinasi</a></li>
-            <li><a href="{{ route('kuliner') }}">Kuliner</a></li>
+            <li><a href="{{ route('kuliner') }}">UMKM</a></li>
             <li><a href="{{ route('auth') }}">Login</a></li>
             {{-- <li><a href="{{ route('auth') }}">Logout</a></li> --}}
           </ul>

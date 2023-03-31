@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('superadmin.layout.master')
 @section('content')
         <!-- partial -->
         <div class="main-panel">
@@ -41,7 +41,7 @@
               <div class="col-sm-4 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h5>Kuliner</h5>
+                    <h5>UMKM</h5>
                     <div class="row">
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('superadmin.layout.master')
 
 
 @push('css')
@@ -12,11 +12,11 @@
 <div class="main-panel">
     <div class="content-wrapper">
       <div class="page-header">
-        <h3 class="page-title"> Add Kuliner </h3>
+        <h3 class="page-title"> Add UMKM </h3>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Forms</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Add Kuliner</li>
+            <li class="breadcrumb-item active" aria-current="page">Add UMKM</li>
           </ol>
         </nav>
       </div>
@@ -25,7 +25,7 @@
         <div class="card-body">
           <form action="/insertkuliner" method="POST" enctype="multipart/form-data">
             @csrf
-          <h4 class="card-title">Kuliner Form Input</h4>
+          <h4 class="card-title">UMKM Form Input</h4>
           <p class="card-description"> Input Below Here </p>
           <form class="forms-sample">
             <div class="form-group">

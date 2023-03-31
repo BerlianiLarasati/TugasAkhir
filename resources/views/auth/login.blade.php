@@ -1,73 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login Panel</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{ asset('THEMEWAGON') }}/template/assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="{{ asset('THEMEWAGON') }}/template/assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
-    <link rel="stylesheet" href="{{ asset('THEMEWAGON') }}/template/assets/css/style.css">
-    <!-- End layout styles -->
-    <link rel="shortcut icon" href="{{asset('css/assets/tourism.png')}}" />
-  </head>
-  <body>
-    <div class="container-scroller">
-      <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="row w-100 m-0">
-          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
-            <div class="card col-lg-4 mx-auto">
-              <div class="card-body px-5 py-5">
-                <h3 class="card-title text-left mb-3">Login</h3>
-                <form action="{{ route('auth') }}" method="post">
-                    @csrf
-                  <div class="form-group">
-                    <label>Username or email *</label>
-                    <input type="text" class="form-control p_input" name="email">
-                  </div>
-                  <div class="form-group">
-                    <label>Password *</label>
-                    <input type="password" class="form-control p_input" name="password">
-                  </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
-                  </div>
-                  <div class="d-flex">
-                    {{-- <button class="btn btn-facebook mr-2 col">
-                      <i class="mdi mdi-facebook"></i> Facebook </button>
-                    <button class="btn btn-google col">
-                      <i class="mdi mdi-google-plus"></i> Google plus </button>
-                  </div> --}}
-                  <p class="sign-up">Don't have an Account?<a href="{{ route ('register') }}"> Sign Up</a></p>
+
+<head>
+    <title>Wisata Surabaya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{asset('css/assets/favicon.png')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/vendor/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/vendor/animate/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/vendor/css-hamburgers/hamburgers.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/vendor/animsition/css/animsition.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/vendor/select2/select2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/vendor/daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/css/util.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('users') }}/css/main.css">
+
+    <meta name="robots" content="noindex, follow">
+    <script nonce="43441971-bcc1-4e58-8481-d19929f44f3d">
+        (function(w, d) {
+            ! function(di, dj, dk, dl) {
+                di[dk] = di[dk] || {};
+                di[dk].executed = [];
+                di.zaraz = {
+                    deferred: [],
+                    listeners: []
+                };
+                di.zaraz.q = [];
+                di.zaraz._f = function(dm) {
+                    return function() {
+                        var dn = Array.prototype.slice.call(arguments);
+                        di.zaraz.q.push({
+                            m: dm,
+                            a: dn
+                        })
+                    }
+                };
+                for (const dp of ["track", "set", "debug"]) di.zaraz[dp] = di.zaraz._f(dp);
+                di.zaraz.init = () => {
+                    var dq = dj.getElementsByTagName(dl)[0],
+                        dr = dj.createElement(dl),
+                        ds = dj.getElementsByTagName("title")[0];
+                    ds && (di[dk].t = dj.getElementsByTagName("title")[0].text);
+                    di[dk].x = Math.random();
+                    di[dk].w = di.screen.width;
+                    di[dk].h = di.screen.height;
+                    di[dk].j = di.innerHeight;
+                    di[dk].e = di.innerWidth;
+                    di[dk].l = di.location.href;
+                    di[dk].r = dj.referrer;
+                    di[dk].k = di.screen.colorDepth;
+                    di[dk].n = dj.characterSet;
+                    di[dk].o = (new Date).getTimezoneOffset();
+                    if (di.dataLayer)
+                        for (const dw of Object.entries(Object.entries(dataLayer).reduce(((dx, dy) => ({
+                                ...dx[1],
+                                ...dy[1]
+                            }))))) zaraz.set(dw[0], dw[1], {
+                            scope: "page"
+                        });
+                    di[dk].q = [];
+                    for (; di.zaraz.q.length;) {
+                        const dz = di.zaraz.q.shift();
+                        di[dk].q.push(dz)
+                    }
+                    dr.defer = !0;
+                    for (const dA of [localStorage, sessionStorage]) Object.keys(dA || {}).filter((dC => dC
+                        .startsWith("_zaraz_"))).forEach((dB => {
+                        try {
+                            di[dk]["z_" + dB.slice(7)] = JSON.parse(dA.getItem(dB))
+                        } catch {
+                            di[dk]["z_" + dB.slice(7)] = dA.getItem(dB)
+                        }
+                    }));
+                    dr.referrerPolicy = "origin";
+                    dr.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(di[dk])));
+                    dq.parentNode.insertBefore(dr, dq)
+                };
+                ["complete", "interactive"].includes(dj.readyState) ? zaraz.init() : di.addEventListener(
+                    "DOMContentLoaded", zaraz.init)
+            }(w, d, "zarazData", "script");
+        })(window, document);
+    </script>
+</head>
+
+<body style="background-color: #666666;">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-more" style="background-image: url('users/images/bg-02.jpg');"></div>
+                <form action="{{ route('auth') }}" method="post" class="login100-form validate-form">
+                  @csrf
+                    <span class="login100-form-title p-b-43">
+                        Masuk
+                    </span>
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Email</span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="password">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Password</span>
+                    </div>
+                    <div class="flex-sb-m w-full p-t-3 p-b-32">
+                        <div>
+                            <a href="{{ asset('users') }}/#" class="txt1">
+                                lupa kata sandi ?
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Login
+                        </button>
+                    </div>
+                    <div class="text-center p-t-46 p-b-20">
+                        <span class="txt2">
+                            Belum Punya Akun? <a href="{{ route ('register') }}" class="txt1"> Gabung Sekarang</a>
+                        </span>
+                    </div>
                 </form>
-              </div>
             </div>
-          </div>
-          <!-- content-wrapper ends -->
         </div>
-        <!-- row ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{{ asset('THEMEWAGON') }}/template/assets/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{ asset('THEMEWAGON') }}/template/assets/js/off-canvas.js"></script>
-    <script src="{{ asset('THEMEWAGON') }}/template/assets/js/hoverable-collapse.js"></script>
-    <script src="{{ asset('THEMEWAGON') }}/template/assets/js/misc.js"></script>
-    <script src="{{ asset('THEMEWAGON') }}/template/assets/js/settings.js"></script>
-    <script src="{{ asset('THEMEWAGON') }}/template/assets/js/todolist.js"></script>
-    <!-- endinject -->
-  </body>
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendor/select2/select2.min.js"></script>
+
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114"
+        integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw=="
+        data-cf-beacon='{"rayId":"7af0d289ce7ea137","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.3.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

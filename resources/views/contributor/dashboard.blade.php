@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('user.layout.master')
 @section('content')
         <!-- partial -->
         <div class="main-panel">

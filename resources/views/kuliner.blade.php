@@ -41,13 +41,13 @@
         <ul class="nav-link">
           <li class="nav-item2"><a href="{{ route('home') }}">Home</a></li>
           <li class="nav-item2"><a href="{{ route('destinasi') }}">Destinasi</a></li>
-          <li class="nav-item2"><a href="{{ route('kuliner') }}">Kuliner</a></li>
+          <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
           <li class="nav-item2"><a href="{{ route('auth') }}">Login</a></li>
         </ul>
       </nav>
     </header>
     <div class="kuliner-nav">
-      <p><a href="{{ route('home') }}">Beranda</a> > Kuliner Surabaya</p>
+      <p><a href="{{ route('home') }}">Beranda</a> > UMKM Surabaya</p>
     </div>
     <div class="kuliner-judul">
       <h2>KULINER SURABAYA</h2>

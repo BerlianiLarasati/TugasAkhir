@@ -42,7 +42,7 @@
         <ul class="nav-link">
           <li class="nav-item2"><a href="{{ route('home') }}">Home</a></li>
           <li class="nav-item2"><a href="{{ route('destinasi') }}">Destinasi</a></li>
-          <li class="nav-item2"><a href="{{ route('kuliner') }}">Kuliner</a></li>
+          <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
           <li class="nav-item2"><a href="{{ route('auth') }}">Login</a></li>
         </ul>
       </nav>

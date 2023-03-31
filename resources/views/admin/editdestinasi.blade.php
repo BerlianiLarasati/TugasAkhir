@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('superadmin.layout.master')
 
 
 @push('css')
