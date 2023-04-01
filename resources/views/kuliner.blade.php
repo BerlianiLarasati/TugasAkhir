@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kuliner Surabaya</title>
+    <title>UMKM</title>
     <link rel="shortcut icon" href="{{asset('css/assets')}}/favicon.png">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -30,27 +30,33 @@
     />
     <link rel="stylesheet" href="{{asset('css/tes.css')}}" />
   </head>
+  
   <body>
     <header>
       <nav class="navbar-kuliner">
-        <a href="" class="nav-logo"
+        <a href="{{route('home')}}" class="nav-logo"
           ><img
             src="{{asset('css/assets')}}/logo-white.png"
             alt=""
         /></a>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
         <ul class="nav-link">
-          <li class="nav-item2"><a href="{{ route('home') }}">Home</a></li>
-          <li class="nav-item2"><a href="{{ route('destinasi') }}">Destinasi</a></li>
+          <li class="nav-item2"><a href="{{ route('home') }}">HOME</a></li>
+          <li class="nav-item2"><a href="{{ route('destinasi') }}">DESTINASI</a></li>
           <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
-          <li class="nav-item2"><a href="{{ route('auth') }}">Login</a></li>
+          <li class="nav-item2"><a class="btn" href="{{ route('auth') }}">LOG IN</a></li>
         </ul>
       </nav>
     </header>
     <div class="kuliner-nav">
-      <p><a href="{{ route('home') }}">Beranda</a> > UMKM Surabaya</p>
+      <p><a href="{{ route('home') }}">Beranda</a> > UMKM</p>
     </div>
     <div class="kuliner-judul">
-      <h2>KULINER SURABAYA</h2>
+      <h2>PRODUK UMKM</h2>
     </div>
     <div><br /></div>
     <p class="kuliner-filter">
@@ -128,7 +134,7 @@
         </ul>
       </div>
     </div> --}}
-
+    <div class="container">
     <div class="collapse" id="collapse2">
       <div class="card card-body">
         Filter Kategori
@@ -233,54 +239,71 @@
       <div class="card card-body">
         <h6>Filter Kata Kunci</h6>
         <div class="form-group">
-          <input type="text" class="form-control" name="keyword" />
+          <form action="{{route('kuliner')}}" method="get">
+            <input type="text" class="form-control" name="keyword" />
+            <button type="submit">Filter</button>
+          </form>
         </div>
       </div>
     </div>
 
+    {{-- ----- content ----- --}}
+    <div class="container">
     <div class="row">
-      <div class="col-md-4 text-center my-2">
+      <div class="col-md-4 my-2">
         <a
-          href="https://goo.gl/maps/9UqhFvsAsKw8dViC9"
+          href="{{ route('deskripsi.tehrosella') }}"
         >
           <img
-            class="img-fluid-kuliner"
-            src="{{ asset ('css/assets')}}/rawon-kalkulator.jpg"
-            alt="Rawon Kalkulator"
+            class="img-fluid "
+            src="https://lh3.googleusercontent.com/p/AF1QipNA3g8VUZlf8uIr9ldG59Lp0Gu0hQh2RHwKuKqp=s1280-p-no-v1" alt=""
+            alt="Teh Rosella"
+            style="border-radius: 20px"
           />
         </a>
-        <div class="mt-2">
-          <span class="span-kategori"> Kuliner </span>
-          <hr class="my-2" />
-          <h5 class="font-weight-bold">Rawon Kalkulator</h5>
+        <div class="mt-2 picture-title">
+          <span class="label"> Foods & Beverages </span>
+          <h5 class="font-weight-bold">Teh Rosella</h5>
           <h6>
-            <i class="fa fa-fw fa-map-marker-alt"></i>
-            Sentra PKL Tamam Bungkul Jl. Raya Darmo
+            <i class="fa-solid fa-shop"></i>
+            Rumah Teh Aqisa
           </h6>
         </div>
       </div>
 
       @foreach ($kuliner as $row)
+      {{-- <div class="col">
+        <a href="{{route("umkm-detail", ['id' => $product['id']])}}">
+            <div class="img-container">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNA3g8VUZlf8uIr9ldG59Lp0Gu0hQh2RHwKuKqp=s1280-p-no-v1" alt="">
+            </div>
+            <div class="label">{{$product->category_id}}</div>
+            <h3 style="margin: 10px 0px">{{$product->nama}}</h3>
+            <i class="fas fa-store"></i>
+            <span>{{$product->shop_name}}</span>
+        </a>
+    </div> --}}
+
       <div class="col-md-4 text-center my-2">
         <a
           href="/deskripsi/deskripsikuliner/{{$row->id}}"
         >
           <img
             class="img-fluid"
-            style="border-radius: 10px 100px"
+            style="border-radius: 20px"
             src="{{asset('fotokuliner/'.$row->foto)}}"
             alt="{{$row->name}}"
           />
         </a>
-        <div class="mt-2">
-          <span class="span-kategori">{{$row->address}}</span>
-          <hr class="my-2" />
+        <div class="mt-2 picture-title">
+          <span class="label">{{$row->address}}</span>
           <h5 class="font-weight-bold">{{$row->name}}</h5>
           <h6>
-            <i class="fa fa-fw fa-map-marker-alt"></i>
+            <i class="fa-solid fa-shop"></i>
             {{$row->kategori}}
           </h6>
         </div>
+      </div>
       </div>
       @endforeach
 
@@ -303,9 +326,9 @@
             Ruko Taman Gapura, Jl. Niaga Gapura No.14
           </h6>
         </div>
-      </div> --}}
+      </div>
 
-      {{-- <div class="col-md-4 text-center my-2">
+      <div class="col-md-4 text-center my-2">
         <a
           href="https://goo.gl/maps/9y86EMNGgCmFtc8E9"
         >
@@ -425,6 +448,8 @@
         </div>
       </div> -->
     </div>
+  </div>
+  </div>
 
     <!-- <div class="nav-list-page">
       <nav>

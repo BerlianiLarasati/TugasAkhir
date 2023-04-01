@@ -89,3 +89,5 @@ Route::get('destinasi', [DestinasiController::class, 'destinasi'])->name('destin
 Route::get('kuliner', [KulinerPageController::class, 'kuliner'])->name('kuliner');
 
 Route::get('deskripsi/museumpendidikan', [DeskripsiController::class, 'museumpendidikan'])->name('deskripsi.museumpendidikan');
+
+Route::get('deskripsi/tehrosella', [DeskripsiController::class, 'tehrosella'])->name('deskripsi.tehrosella');

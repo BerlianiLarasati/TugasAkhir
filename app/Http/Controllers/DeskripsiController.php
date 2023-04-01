@@ -10,4 +10,9 @@ class DeskripsiController extends Controller
     {
         return view('deskripsi.museumpendidikan');
     }
+
+    public function tehrosella()
+    {
+        return view('deskripsi.tehrosella');
+    }
 }

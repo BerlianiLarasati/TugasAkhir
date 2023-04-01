@@ -31,7 +31,7 @@
     <nav>
       <div class="layout">
         <div class="logo">
-          <a href=""><img src="{{asset('css/assets/logo-white.png')}}" class="putih" /></a>
+          <a href="{{route('home')}}"><img src="{{asset('css/assets/logo-white.png')}}" class="putih" /></a>
         </div>
 
         <div class="menu">
@@ -41,10 +41,10 @@
             <span class="garis"></span>
           </a>
           <ul class="menuzord-menu menuzord-right">
-            <li class="active"><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('destinasi') }}">Destinasi</a></li>
-            <li><a href="{{ route('kuliner') }}">UMKM</a></li>
-            <li><a href="{{ route('auth') }}">Login</a></li>
+            <li class="active"><a class="menu_list" href="{{ route('home') }}">Home</a></li>
+            <li><a class="menu_list" href="{{ route('destinasi') }}">Destinasi</a></li>
+            <li><a class="menu_list" href="{{ route('kuliner') }}">UMKM</a></li>
+            <li><a class="btn" href="{{ route('auth') }}">Login</a></li>
             {{-- <li><a href="{{ route('auth') }}">Logout</a></li> --}}
           </ul>
         </div>
@@ -63,17 +63,19 @@
             Let's explore on of the biggest city in Indonesia with famous name
             called City of Heroes
           </span>
-          <div class="icon">
-            <a class="a1" href="{{ route('destinasi') }}"
-              ><i class="fa-solid fa-archway"></i><br />
-              Destinasi <br />
-              Wisata</a
-            >
-            <a class="a1" href="{{ route('kuliner') }}"
-              ><i class="fa fa-fw fa-utensils"></i> <br />
-              Kuliner <br />
-              Surabaya</a
+          <div class="ripple">
+            <div class="icon">
+              <a class="a1" href="{{ route('destinasi') }}"
+                ><i class="fa-solid fa-archway"></i><br />
+                Destinasi <br />
+                Wisata</a
               >
+              <a class="a1" href="{{ route('kuliner') }}"
+                ><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i> <br />
+                UMKM <br />
+                Surabaya</a
+                >
+            </div>
           </div>
         </div>
       </header>
@@ -132,7 +134,7 @@
               <div class="row">
                 <div class="col-8">
                   <h4 class="title-highlight">
-                    <div class="h4-1"">Explore 360</div>
+                    <div class="h4-1"">Explore 360</div> <br>
                     <div class="h4-2">Wisata Surabaya</div>
                   </h4>
                 </div>
@@ -186,13 +188,101 @@
                 <div class="col-md-12">
                   <div class="text-center">
                     <img src="{{ asset ('css/assets')}}/icon-sign.png" alt="" />
-                    <h3 class="title-highlight-dark text-primary">
+                    <h3>
                       Start Your Best <br />
                       Journey In Surabaya
                     </h3>
                   </div>
                 </div>
               </div>
+              {{-- codingan yang lama --}}
+              {{-- <div class="gridEventSby">
+                <div class="grid-block1">
+                  <div class="history-grid">
+                    <img
+                      src="https://tourism.surabaya.go.id/storage/tour/1672116704_1.jpg"
+                      alt=""
+                    />
+                    <div class="sub-grid">
+                      <div class="eventnya">
+                        <a href="">History & Heritage</a>
+                      </div>
+                      <div class="namaevent">
+                        <a href=""
+                          >GEDUNG ESCOMPTO (Bank Mandiri KCP Kembang Jepun)</a
+                        >
+                      </div>
+                      <div class="alamat">
+                        <span class="material-symbols-outlined"> location_on </span>
+                        <a href="">Jl. Kembang Jepun No 180</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event-grid">
+                    <img
+                      src="https://tourism.surabaya.go.id/storage/event/Muhibah%20Budaya%20Jalur%20Rempah%202022_1653638056.jpeg"
+                      alt=""
+                    />
+                    <div class="sub-grid">
+                      <div class="eventnya">
+                        <a href="">Event</a>
+                      </div>
+                      <div class="namaevent">
+                        <a href="">Muhibah Budaya Jalur Rempah 2022</a>
+                      </div>
+                      <div class="alamat">
+                        <span class="material-symbols-outlined"> location_on </span>
+                        <a href="">
+                          Jl. Gubernur Suryo No.15, Embong Kaliasin, Kec. Genteng,
+                          Kota SBY, Jawa Timur 60271
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-block2">
+                  <div class="hotel-grid">
+                    <img
+                      src="https://tourism.surabaya.go.id/storage/accomodation/Bekizaar%20Business%20Hotel_1653624861_1.jpg"
+                      alt=""
+                    />
+                    <div class="sub-grid">
+                      <div class="eventnya">
+                        <a href="">Hotel</a>
+                      </div>
+                      <div class="namaevent">
+                        <a href="">Bekizaar Business Hotel</a>
+                      </div>
+                      <div class="alamat">
+                        <span class="material-symbols-outlined"> location_on </span>
+                        <a href="">
+                          Jl. Basuki Rahmat No.15, Embong Kaliasin, Kec. Genteng, Kota
+                          SBY, Jawa Timur 60271
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="history-grid">
+                    <img
+                      src="https://tourism.surabaya.go.id/storage/tour/1672116409_1.jpg"
+                      alt=""
+                    />
+                    <div class="sub-grid">
+                      <div class="eventnya">
+                        <a href="">History & Heritage</a>
+                      </div>
+                      <div class="namaevent">
+                        <a href="">Rumah Abu Keluarga Han</a>
+                      </div>
+                      <div class="alamat">
+                        <span class="material-symbols-outlined"> location_on </span>
+                        <a href="">Jl. Karet No 72</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> --}}
+              {{-- codingan baru --}}
               <div class="row my-4">
                 <div class="col-md-6 mb-2">
                   <div class="row">
@@ -203,24 +293,24 @@
                           style="
                             box-shadow: none;
                             border: none;
-                            border-radius: 20px;
                           "
                         >
                           <div class="img-hover">
                             <img
                               src="{{ asset ('css/assets')}}/Gedung.jpg"
                               class="img-fluid card-img-top img-1"
+                              style="border-radius: 10px"
                             />
                           </div>
                         </div>
-                        <div class="text-dark py-3">
-                          <div class="mb-2">
-                            <span> History &amp; Heritage </span>
+                        <div class="py-3">
+                          <div class="mb-2 label">
+                            <label> History &amp; Heritage </label>
                           </div>
-                          <h5 class="font-weight-bold">
+                          <h5 class="font-weight-bold home-title-destination">
                             GEDUNG ESCOMPTO (Bank Mandiri KCP Kembang Jepun)
                           </h5>
-                          <div class="mb-2">Jl. Kembang Jepun No 180</div>
+                          <div class="home-address-destination">Jl. Kembang Jepun No 180</div>
                         </div>
                       </a>
                     </div>
@@ -230,24 +320,24 @@
                         style="
                           box-shadow: none;
                           border: none;
-                          border-radius: 20px;
                         "
                       >
                         <div class="img-hover">
                           <img
                             src="{{ asset ('css/assets')}}/Piala Walikota.png"
                             class="img-fluid card-img-top img-2"
+                            style="border-radius: 10px"
                           />
                         </div>
                       </div>
                       <div class="text-dark py-3">
-                        <div class="mb-2">
-                          <span> Event </span>
+                        <div class="mb-2 label">
+                          <label> Event </label>
                         </div>
-                        <h5 class="font-weight-bold">
+                        <h5 class="font-weight-bold home-title-destination">
                           Piala Walikota Tournament Skateboard
                         </h5>
-                        <div class="mb-2">
+                        <div class="mb-2 home-address-destination">
                           Skate &amp; BMX Park Ketabang (Parkir Timur Delta
                           Plaza) | Jl. Pemuda No. 31-37 (Jl. Plaza Boulevard)
                         </div>
@@ -263,24 +353,24 @@
                         style="
                           box-shadow: none;
                           border: none;
-                          border-radius: 20px;
                         "
                       >
                         <div class="img-hover">
                           <img
                             src="{{ asset ('css/assets')}}/hotel.jpg"
                             class="img-fluid card-img-top img-3"
+                            style="border-radius: 10px"
                           />
                         </div>
                       </div>
                       <div class="text-dark py-3">
-                        <div class="mb-2">
-                          <span> Hotel </span>
+                        <div class="mb-2 label">
+                          <label> Hotel </label>
                         </div>
-                        <h5 class="font-weight-bold">
+                        <h5 class="font-weight-bold home-title-destination">
                           Hotel JW Marriott Surabaya
                         </h5>
-                        <div class="mb-2">Jl. Embong Malang No.85 - 89</div>
+                        <div class="mb-2 home-address-destination">Jl. Embong Malang No.85 - 89</div>
                       </div>
                     </div>
                     <div class="col-md-12 my-4">
@@ -289,22 +379,22 @@
                         style="
                           box-shadow: none;
                           border: none;
-                          border-radius: 20px;
                         "
                       >
                         <div class="img-hover">
                           <img
                             src="{{asset('css/assets')}}/balai.jpg"
                             class="img-fluid card-img-top img-4"
+                            style="border-radius: 10px"
                           />
                         </div>
                       </div>
                       <div class="text-dark py-3">
-                        <div class="mb-2">
-                          <span> History &amp; Heritage </span>
+                        <div class="mb-2 label">
+                          <label> History &amp; Heritage </label>
                         </div>
-                        <h5 class="font-weight-bold">Balai Pemuda</h5>
-                        <div class="mb-2">Jl. Gubernur Suryo No.15</div>
+                        <h5 class="font-weight-bold home-title-destination">Balai Pemuda</h5>
+                        <div class="mb-2 home-address-destination">Jl. Gubernur Suryo No.15</div>
                       </div>
                     </div>
                   </div>

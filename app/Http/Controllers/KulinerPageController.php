@@ -8,9 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class KulinerPageController extends Controller
 {
-    public function kuliner()
+    public function kuliner(Request $request)
         {
-        $kuliner = Kuliner::all();
-        return view('kuliner',compact('kuliner'));
+        $kuliner= Kuliner::where('nama', 'like', "%" . $request->search . "%")->get();
+        // $kuliner = Kuliner::all();
+        return view('kuliner', ['kuliner'=>$kuliner]);
+        // return view('kuliner',compact('kuliner'));
         }
 }

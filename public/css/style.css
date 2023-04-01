@@ -13,6 +13,12 @@ html {
 body {
     margin: 0px;
     padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .layout {
@@ -47,6 +53,10 @@ nav {
     width: 100%;
     transition: background-color 0.5s ease;
     font-weight: bold;
+    padding: 37px 10px;
+    text-transform: uppercase;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 nav.putih {
@@ -69,6 +79,8 @@ nav .menu {
     float: right;
     height: 60px;
     max-width: 600px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 nav .menu ul {
@@ -89,6 +101,10 @@ nav .menu ul li a {
     text-align: center;
     padding: 0px 16px 0px 16px;
     text-decoration: none;
+    transition: all ease 0.5s;
+    font-size: .875rem;
+    line-height: 1.5;
+    position: relative;
 }
 
 /* nav .menu ul li a {
@@ -98,9 +114,54 @@ nav .menu ul li a {
   text-decoration: none;
 } */
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav .menu ul li a:hover {
+    color:#007aff;
 }
+
+.menu ul li a.menu_list::after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: -5px;
+    background: #6868ac;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  
+.menu ul li a.menu_list:hover::after,
+.menu ul li a.menu_list:focus:after,
+.menu ul li a.menu_list:active::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  
+  
+.menu ul li a.btn {
+    display: inline-block;
+    width: 120px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #6868ac;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+    margin-left: 10px;
+  }
+  
+.menu ul li a.btn:hover {
+    background-color: white;
+    color: #6868ac;
+  }
+
 
 /* pengaturan header */
 header {
@@ -125,7 +186,7 @@ header .intro {
     color: #fff;
     text-align: center;
     position: relative;
-    top: 85px;
+    top: 180px;
 }
 header .intro h2 {
     font-size: 75px;
@@ -190,6 +251,7 @@ header .overlay {
     background-color: #fff;
 }
 
+
 nav.putih {
     background-color: #fff;
 }
@@ -205,7 +267,7 @@ nav .logo img.hitam {
 
 .icon {
     display: flex;
-    padding-top: 200px;
+    padding-top: 100px;
     justify-content: center;
 }
 
@@ -215,10 +277,114 @@ nav .logo img.hitam {
     text-decoration: none;
     color: white;
     font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
 }
 
+/* .ripple {
+    width: 140px;
+    height: 140px;
+    border-radius: 100px;
+    line-height: 140px;
+    position: relative;
+    z-index: 9;
+    transition: all ease 0.5s;
+}
+
+.ripple a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    top: 0;
+    left: 0;
+    transform: scale(1,1);
+    background-color: #4a4a8a;
+    border-radius: 100px;
+    opacity: .4;
+    z-index: -1;
+    transition: all ease 0.5s;
+    display: inline-block;
+}
+
+.icon a:hover::before {
+    animation: circleBefore 2s linear 0s infinite;
+}
+@keyframes circleBefore {
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.icon a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(1,1);
+    background-color: #4a4a8a;
+    border-radius: 100px;
+    opacity: .2;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+.icon a:hover::after {
+    animation: circleAfter 2s linear 0s infinite;
+}
+@keyframes circleAfter {
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+} */
+
+/* .icon a:hover::before {
+    animation: circleBefore 2s linear 0s infinite;
+}
+@keyframes circleBefore {
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.icon a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(1,1);
+    background-color: #4a4a8a;
+    border-radius: 100px;
+    opacity: .2;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+
+.icon a:hover::after {
+    animation: circleAfter 2s linear 0s infinite;
+}
+@keyframes circleAfter {
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}  */
+
 .icon a:hover {
-    background-color: skyblue;
+    border-radius: 100px;
+    transform: scale(1,1);
+    background-color: #4a4a8a;
+    transition: all ease 0.5s;
+    
+    
+    
 }
 
 /* Section bagian icon tengah */
@@ -244,6 +410,19 @@ nav .logo img.hitam {
     font-size: 14px;
     margin: 10px;
 }
+
+/* video360 */
+.section-explore360 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0px 180px;
+    margin: 20px 20px 20px 20px;
+}
+
+
+
 
 /* footer */
 .isi5 {
@@ -297,10 +476,20 @@ nav .logo img.hitam {
 
 .h4-1 {
     color: #039be5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+    font-size: 40px;
+    margin-bottom: -20px;
 }
 
 .h4-2 {
     color: #ff9800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 section .title-highlight {
@@ -308,11 +497,93 @@ section .title-highlight {
     font-weight: bold;
 }
 
+.text-right {
+    float: right;
+}
+
+.video_overlay h6{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+    color: #6868ac;
+    font-size: 14px;
+    background-color: white;
+    margin: 0 0 0 0;
+    padding: 5px 5px 5px 5px;
+    bottom: 100px;
+    border-radius: 10px;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 10px 0px 20px 0px #6868ac;
+}
+
+.text-center h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-size: 50px;
+    margin: 0 0 8px 0;
+    color: #6868ac;
+    text-align: center;
+    font-weight: 700;
+}
+
+.label {
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    background-color: #6868ac;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.home-title-destination {
+    color: black;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+.home-address-destination {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-weight: lighter;
+}
+
+.img-hover {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-hover img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    transition: transform 5s;
+    overflow: hidden;
+}
+
+.img-hover:hover img {
+    transform: scale(1.4);
+}
+
 footer {
     padding: 50px 0px 50px 0px;
     background-color: rgb(62, 38, 119);
     color: #fff;
 }
+
 /* footer .layout {
   display: flex;
   flex-direction: row;
@@ -490,3 +761,4 @@ footer .h5 .opsi {
         padding-bottom: 30px;
     }
 } */
+

@@ -608,7 +608,7 @@ ul {
 
 ol,
 ul,
-dl {
+dl { 
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -4405,6 +4405,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   color: var(--ct-link-color);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  text-transform: uppercase;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {

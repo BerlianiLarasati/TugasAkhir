@@ -34,21 +34,21 @@
   <body>
     <header>
       <nav class="navbar-destinasi">
-        <a href="" class="nav-logo"
+        <a href="{{route('home')}}" class="nav-logo"
           ><img
             src="{{ asset ('css/assets')}}/logo-white.png"
             alt=""
         /></a>
         <ul class="nav-link">
-          <li class="nav-item2"><a href="{{ route('home') }}">Home</a></li>
-          <li class="nav-item2"><a href="{{ route('destinasi') }}">Destinasi</a></li>
+          <li class="nav-item2"><a href="{{ route('home') }}">HOME</a></li>
+          <li class="nav-item2"><a href="{{ route('destinasi') }}">DESTINASI</a></li>
           <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
-          <li class="nav-item2"><a href="{{ route('auth') }}">Login</a></li>
+          <li class="nav-item2"><a class="btn" href="{{ route('auth') }}">LOG IN</a></li>
         </ul>
       </nav>
     </header>
     <div class="destinasi-nav">
-      <p><a href="{{ route('home') }}">Beranda</a> > Destinasi Wisata</p>
+      <p><a href="{{ route('home') }}">Beranda</a> > Destinasi</p>
     </div>
     <div class="destinasi-judul">
       <h2>DESTINASI WISATA</h2>
@@ -129,7 +129,7 @@
         </ul>
       </div>
     </div> --}}
-
+    <div class="container">
     <div class="collapse" id="collapse2">
       <div class="card card-body">
         Filter Kategori
@@ -239,6 +239,7 @@
       </div>
     </div>
 
+    {{-- ----------content--------------- --}}
     <div class="row">
       <div class="col-md-4 text-center my-2">
         <a
@@ -424,8 +425,9 @@
             Jl. Genteng Besar
           </h6>
         </div>
-      </div>
-    </div> --}}
+      </div> --}}
+    </div>
+  </div> 
 
     {{-- <div class="nav-list-page">
       <nav>

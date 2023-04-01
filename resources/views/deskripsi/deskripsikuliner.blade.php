@@ -41,18 +41,48 @@
         <ul class="nav-link">
             <li class="nav-item2"><a href="{{ route('home') }}">Home</a></li>
             <li class="nav-item2"><a href="{{ route('destinasi') }}">Destinasi</a></li>
-            <li class="nav-item2"><a href="{{ route('kuliner') }}">Kuliner</a></li>
+            <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
             <li class="nav-item2"><a href="{{ route('auth') }}">Login</a></li>
         </ul>
       </nav>
     </header>
     <div class="destinasi-nav">
-      <p><a href="{{ route('home') }}">Beranda</a> > Destinasi Wisata</p>
+      <p><a href="{{ route('home') }}">Beranda</a> > UMKM</p>
     </div>
-    <div class="destinasi-judul">
+
+    <div class="container_umkm">
+      <div class="grid-details">
+          <div class="row">
+              <img src="{{asset('fotokuliner/'.$kuliner->foto)}}" alt="">
+          </div>
+          <div class="row">
+              <div class="content">
+                  <div class="label">routing kategori</div>
+                  <h1>{{$kuliner->name}}</h1>
+                  <i class="fas fa-store"></i>
+                  <span>routing nama toko</span>
+                  <p>{{$kuliner->description}}
+                  </p>
+      
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>routing alamat</span><br>
+                  <i class="fa-solid fa-phone"></i>
+                  <span>routing kontak</span><br>
+                  <i class="fa-solid fa-globe"></i>
+                  <span>routing alamat</span>
+              </div>
+          </div>
+      </div>
+      </div>
+      
+
+
+
+{{-- ----------punya ardi desainnya kureng-------- --}}
+    {{-- <div class="destinasi-judul">
         <h3 class="fw-bolder text-center mb-4 ">{{$kuliner->name}}</h3>
     </div>
-    {{-- <div><br/></div> --}}
+
     <div>
       <div class="row destinasi-isi" method="get" >
       <div class="d-flex justify-content-center">
@@ -64,7 +94,7 @@
       </div>
       <p class="text-center">{{$kuliner->description}}</p>
     </div>
-      <br>
+      <br> --}}
 
     {{-- <div class="card-body px-2 pt-6">
         <div class="card">
