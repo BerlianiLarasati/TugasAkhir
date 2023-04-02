@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Destination;
 use App\Models\Kuliner;
+use App\Models\Umkm;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -83,14 +84,33 @@ class ContributorController extends Controller
         return view('contributor.kulinerform');
     }
     public function insertkuliner(Request $request){
-        // dd($request);
-    $kuliner = Kuliner::create($request->all());
-    if($request->hasFile('foto')){
-        $request->file('foto')->move('fotokuliner/',$request->file('foto')->getClientOriginalName());
-        $kuliner->foto = $request->file('foto')->getClientOriginalName();
-        $kuliner->save();
+        $validateData = $request->validate([
+            'nama' => 'required',
+            'kategori' => 'required',
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'alamat' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        if ($request->hasFile('foto')) {
+            $image = $request->file('foto');
+
+            $image->storeAs('public/umkm', $image->hashName());
+            
+            $umkm = new Kuliner();
+            $umkm->nama = $request->nama;
+            $umkm->kategori = $request->kategori;
+            $umkm->alamat = $request->alamat;
+            $umkm->deskripsi = $request->deskripsi;
+            $umkm->foto = $image->hashName();
+
+            $umkm->save();     
+            
+            return redirect()->route('contributor.datakuliner')->with('success', 'Data Berhasil Di Tambahkan');
+
+        }else{
+            return response('Please input your image', 400);
         }
-        return redirect()->route('contributor.datakuliner')->with('success', 'Data Berhasil Di Tambahkan');
     }
 
     public function editkuliner($id){
