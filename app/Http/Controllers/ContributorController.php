@@ -37,28 +37,33 @@ class ContributorController extends Controller
     }
 
 
-
-    public function create_umkm()
+    // note get data by id for update destination
+    public function FunctionName($id)
     {
-        return view('contributor.page.create_umkm');
+        $destinasi = Destination::find($id);
+        // return...
     }
 
     
     
     
     
-    // contributor make umkm
+    // fitur for CRUD UMKM
+
+    // get all data umkm
     public function umkm() {
         $umkm = Umkm::all();
-        return view('contributor.page.umkm');
+        return view('contributor.page.umkm',compact('umkm'));
     }
 
+    // get data by id UMKM
     public function viewById($id)
     {
         $umkm = Umkm::find($id);
-
-        // bantu routenya kak
+        // return 
     }
+
+    // insert umkm
     public function insert_umkm(Request $request)
     {
         $validateData = $request->validate([
@@ -94,6 +99,7 @@ class ContributorController extends Controller
         }
     }
 
+    // update umkm
     public function updateUmkm(Request $request, $id)
     {
         $validateData = $request->validate([
@@ -132,6 +138,7 @@ class ContributorController extends Controller
     }
 
 
+    // delete umkm
     public function deleteUmkm($id)
     {
         $umkm = Umkm::find($id);
