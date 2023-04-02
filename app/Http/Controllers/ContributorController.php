@@ -83,12 +83,14 @@ class ContributorController extends Controller
             $umkm->contact = $request->contact;
             $umkm->image = $image->hashName();
 
-            $umkm->save();            
+            $umkm->save();     
+            
+            
             // bantu route nya yah kak
             return redirect()->route('nama_route');
 
         }else{
-            return response('Please provide both image and video files', 400);
+            return response('Please input your image', 400);
         }
     }
 
@@ -110,7 +112,7 @@ class ContributorController extends Controller
         
             $umkm = Umkm::find($id);
         
-            // Hapus image yang lama
+            // Hapus image lama
             Storage::delete('public/umkm/' . $umkm->image);
         
             $umkm->nama = $request->nama;
@@ -122,10 +124,10 @@ class ContributorController extends Controller
         
             $umkm->save();
         
-            // aku bingung route nya kak
+            // bantu routenya kak
             return redirect()->route('nama_route');
         } else {
-            return response('Please provide both image and video files', 400);
+            return response('please input your image', 400);
         }
     }
 
