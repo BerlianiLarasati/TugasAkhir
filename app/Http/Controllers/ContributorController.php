@@ -75,15 +75,57 @@ class ContributorController extends Controller
             $umkm->contact = $request->contact;
             $umkm->image = $image->hashName();
 
-            $umkm->save();
-
-
-            
-            // kirim ke view yang mana?
+            $umkm->save();            
+            // bantu route nya yah kak
+            return redirect()->route('nama_route');
 
         }else{
             return response('Please provide both image and video files', 400);
         }
+    }
 
+    public function updateUmkm(Request $request, $id)
+    {
+        $validateData = $request->validate([
+            'nama' => 'required',
+            'address' => 'required',
+            'shop_name' => 'required',
+            'description' => 'required',
+            'contact' => 'required|numeric',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+        
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+        
+            $image->storeAs('public/umkm', $image->hashName());
+        
+            $umkm = Umkm::find($id);
+        
+            // Hapus image yang lama
+            Storage::delete('public/umkm/' . $umkm->image);
+        
+            $umkm->nama = $request->nama;
+            $umkm->address = $request->address;
+            $umkm->shop_name = $request->shop_name;
+            $umkm->description = $request->description;
+            $umkm->contact = $request->contact;
+            $umkm->image = $image->hashName();
+        
+            $umkm->save();
+        
+            // aku bingung route nya kak
+            return redirect()->route('nama_route');
+        } else {
+            return response('Please provide both image and video files', 400);
+        }
+    }
+
+
+    public function deleteUmkm($id)
+    {
+        $umkm = Umkm::find($id);
+        $umkm->delete();
+        
     }
 }
