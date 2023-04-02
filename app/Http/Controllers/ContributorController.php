@@ -11,6 +11,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 class ContributorController extends Controller
 {
@@ -113,25 +115,47 @@ class ContributorController extends Controller
         }
     }
 
+    
     public function editkuliner($id){
         $kuliner = Kuliner::find($id);
         // dd($data);
         return view('contributor.editkuliner',compact('kuliner'));
     }
-    public function updatekuliner(Request $request, $id){ 
-        // dd($request->file('foto')->getClientOriginalName());
-        $kuliner = Kuliner::find($id);
-        if ($request->hasFile('foto')){
-            $request->file('foto')->move('fotokuliner/',$request->file('foto')->getClientOriginalName());
-            $kuliner->foto = $request->file('foto')->getClientOriginalName();
-        }
-        $kuliner->name = $request->name;
-        $kuliner->address = $request->address;
-        $kuliner->kategori = $request->kategori;
-        $kuliner->description = $request->description;
 
-        $kuliner->save();
-        return redirect()->route('contributor.datakuliner')->with('success', 'Data Berhasil Di Edit');
+
+    public function updatekuliner(Request $request, $id){ 
+        $validateData = $request->validate([
+            'nama' => 'required',
+            'kategori' => 'required',
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'alamat' => 'required',
+            'deskripsi' => 'required',
+        ]);
+    
+        if ($request->hasFile('foto')) {
+            $image = $request->file('foto');
+            $imagePath = 'public/umkm/'.$image->hashName();
+    
+            // Menghapus foto lama
+            Storage::delete($request->foto_lama);
+    
+            // Menyimpan foto baru
+            $image->storeAs('public/umkm', $image->hashName());
+            
+            $umkm = Kuliner::find($id);
+            $umkm->nama = $request->nama;
+            $umkm->kategori = $request->kategori;
+            $umkm->alamat = $request->alamat;
+            $umkm->deskripsi = $request->deskripsi;
+            $umkm->foto = $image->hashName();
+    
+            $umkm->save();     
+            return redirect()->route('contributor.datakuliner')->with('success', 'Data Berhasil Di Edit');
+    
+        }else{
+            return response('Please input your image', 400);
+        }
+
      }
      public function deskripsikuliner($id){
         $kuliner = Kuliner::find($id);

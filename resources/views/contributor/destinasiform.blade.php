@@ -67,9 +67,14 @@
               <label for="exampleTextarea1">Deskripsi</label>
               <textarea name='description' class="form-control" id="exampleTextarea1" rows="4"></textarea>
             </div>
-            <div class="row justify-content-end">
-              <a href="{{ route('contributor.datadestinasi') }}" class="btn btn-secondary mr-2">Cancel</a>
-              <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+            <div class="row mt-4">
+              <div class="col-sm-6 text-start">
+                <a href="{{ route('contributor.datadestinasi') }}" class="btn btn-secondary mr-2">Cancel</a>
+              </div>
+              <div class="col-sm-6 text-end">
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+              </div>
             </div>
           </form>
         </div>

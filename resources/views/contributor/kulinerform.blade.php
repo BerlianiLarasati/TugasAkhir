@@ -49,20 +49,19 @@
             <div class="form-group">
               <label>File upload</label>
               <input name='foto' type="file" class="file-upload-default">
-              <!-- <div class="input-group col-xs-12">
-                <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                <span class="input-group-append">
-                  <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                </span>
-              </div> -->
             </div>
             <div class="form-group">
               <label for="exampleTextarea1">Deskripsi</label>
               <textarea name='deskripsi' class="form-control" id="exampleTextarea1" rows="4"></textarea>
             </div>
-            <div class="row justify-content-end">
-              <a href="{{ route('contributor.datakuliner') }}" class="btn btn-secondary mr-2">Cancel</a>
-              <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+            <div class="row mt-4">
+              <div class="col-sm-6 text-start">
+                <a href="{{ route('contributor.datakuliner') }}" class="btn btn-secondary mr-2">Cancel</a>
+              </div>
+              <div class="col-sm-6 text-end">
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+              </div>
             </div>
           </form>
         </div>
