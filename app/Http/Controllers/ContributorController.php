@@ -38,19 +38,27 @@ class ContributorController extends Controller
 
 
 
-
-    public function umkm() {
-        return view('contributor.page.umkm');
-    }
-
     public function create_umkm()
     {
         return view('contributor.page.create_umkm');
     }
 
-
-
+    
+    
+    
+    
     // contributor make umkm
+    public function umkm() {
+        $umkm = Umkm::all();
+        return view('contributor.page.umkm');
+    }
+
+    public function viewById($id)
+    {
+        $umkm = Umkm::find($id);
+
+        // bantu routenya kak
+    }
     public function insert_umkm(Request $request)
     {
         $validateData = $request->validate([
@@ -126,6 +134,6 @@ class ContributorController extends Controller
     {
         $umkm = Umkm::find($id);
         $umkm->delete();
-        
+
     }
 }
