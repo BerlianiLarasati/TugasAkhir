@@ -30,15 +30,16 @@
           <form class="forms-sample">
             <div class="form-group">
               <label for="exampleInputName1">Nama</label>
-              <input name='name' type="text" class="form-control" id="name" placeholder="Name">
+              <input name='nama' type="text" class="form-control" id="name" placeholder="Name">
             </div>
             <div class="form-group">
               <label for="exampleSelectGender">Kategori</label>
-              <select name='address' class="form-control" id="exampleSelectGender">
+              <select name='alamat' class="form-control" id="exampleSelectGender">
                 <option selected>Pilih Kategori</option>
-                <option value="Kuliner">Kuliner</option>
-                <option value="Minuman">Minuman</option>
+                <option value="Main Course">Main Course</option>
+                <option value="Beverages">Beverages</option>
                 <option value="Snack">Snack</option>
+                <option value="Food Court">Food Court</option>
               </select>
             </div>
             <div class="form-group">
