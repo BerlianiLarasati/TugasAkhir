@@ -9,10 +9,12 @@ use Illuminate\Support\Facades\DB;
 class DestinasiController extends Controller
 {
     //
-    public function destinasi()
-        {
-        $destinasi = Destination::all();
+    public function destinasi(Request $request)
+    {
+        
+        $destinasi = Destination::where('name', 'like', '%' .$request->keyword. '%')
+        ->where('kategori', '=', $request->filter_kategori) ->get();
         return view('destinasi', compact('destinasi'));
-        }
+    }
         
 }
