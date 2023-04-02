@@ -36,9 +36,10 @@
               <label for="kategori">Kategori</label>
               <select name='kategori' class="form-control" id="exampleSelectGender">
                 <option selected>Pilih Kategori</option>
-                <option value="Kuliner">Kuliner</option>
-                <option value="Minuman">Minuman</option>
+                <option value="Main Course">Main Course</option>
+                <option value="Beverages">Beverages</option>
                 <option value="Snack">Snack</option>
+                <option value="Food Court">Food Court</option>
               </select>
             </div>
             <div class="form-group">
