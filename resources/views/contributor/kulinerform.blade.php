@@ -30,11 +30,11 @@
           <form class="forms-sample">
             <div class="form-group">
               <label for="exampleInputName1">Name</label>
-              <input name='name' type="text" class="form-control" id="name" placeholder="Name">
+              <input name='nama' type="text" class="form-control" id="name" placeholder="Name">
             </div>
             <div class="form-group">
-              <label for="exampleSelectGender">Kategori</label>
-              <select name='address' class="form-control" id="exampleSelectGender">
+              <label for="kategori">Kategori</label>
+              <select name='kategori' class="form-control" id="exampleSelectGender">
                 <option selected>Pilih Kategori</option>
                 <option value="Kuliner">Kuliner</option>
                 <option value="Minuman">Minuman</option>
@@ -43,21 +43,21 @@
             </div>
             <div class="form-group">
               <label for="exampleInputCity1">Wilayah</label>
-              <input name='kategori' type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+              <input name='alamat' type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
             </div>
             <div class="form-group">
               <label>File upload</label>
-              <input name='foto' type="file" name="img[]" class="file-upload-default">
-              <div class="input-group col-xs-12">
+              <input name='foto' type="file" class="file-upload-default">
+              <!-- <div class="input-group col-xs-12">
                 <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
                 <span class="input-group-append">
                   <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
                 </span>
-              </div>
+              </div> -->
             </div>
             <div class="form-group">
               <label for="exampleTextarea1">Deskripsi</label>
-              <textarea name='description' class="form-control" id="exampleTextarea1" rows="4"></textarea>
+              <textarea name='deskripsi' class="form-control" id="exampleTextarea1" rows="4"></textarea>
             </div>
             <div class="row justify-content-end">
               <a href="{{ route('contributor.datakuliner') }}" class="btn btn-secondary mr-2">Cancel</a>

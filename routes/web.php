@@ -31,7 +31,7 @@ Route::get('register', [RegisterController::class, 'index'])->name('register');
 Route::post('register', [RegisterController::class, 'registration'])->name('register.registration');
 
 // Login
-Route::get('login', [LoginController::class, 'index'])->middleware('guest')->name('login');
+Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'authenticate'])->name('auth');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
