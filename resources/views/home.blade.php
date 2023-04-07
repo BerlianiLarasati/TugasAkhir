@@ -28,7 +28,27 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}" />
   </head>
   <body>
-    <nav>
+
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-fluid">
+        <div class="logo">
+          <a href="{{route('home')}}"><img src="{{asset('css/assets/logo-white.png')}}" class="putih" /></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav">
+            <li class="nav-link active" aria-current="page"><a class="menu_list" href="{{ route('home') }}">Home</a></li>
+            <li><a class="nav-link" href="{{ route('destinasi') }}">Destinasi</a></li>  
+            <li><a class="nav-link" href="{{ route('kuliner') }}">UMKM</a></li> 
+            <li><a class="nav-link" href="{{ route('auth') }}">Login</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {{-- <nav>
       <div class="layout">
         <div class="logo">
           <a href="{{route('home')}}"><img src="{{asset('css/assets/logo-white.png')}}" class="putih" /></a>
@@ -45,11 +65,12 @@
             <li><a class="menu_list" href="{{ route('destinasi') }}">Destinasi</a></li>
             <li><a class="menu_list" href="{{ route('kuliner') }}">UMKM</a></li>
             <li><a class="btn" href="{{ route('auth') }}">Login</a></li>
-            {{-- <li><a href="{{ route('auth') }}">Logout</a></li> --}}
+            
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> --}}
+    
     <div class="layar-penuh">
       <header id="home">
         <div class="overlay"></div>
