@@ -38,8 +38,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <ul class="navbar-nav">
-            <li class="nav-link active" aria-current="page"><a class="menu_list" href="{{ route('home') }}">Home</a></li>
+          <ul class="navbar-home navbar-nav">
+            <li><a class="nav-link active-nav" href="{{ route('home') }}">Home</a></lint=>
             <li><a class="nav-link" href="{{ route('destinasi') }}">Destinasi</a></li>  
             <li><a class="nav-link" href="{{ route('kuliner') }}">UMKM</a></li> 
             <li><a class="nav-link" href="{{ route('auth') }}">Login</a></li> 
@@ -70,7 +70,7 @@
         </div>
       </div>
     </nav> --}}
-    
+
     <div class="layar-penuh">
       <header id="home">
         <div class="overlay"></div>
