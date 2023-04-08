@@ -32,44 +32,37 @@
   </head>
   
   <body>
-    <header>
-      <nav class="navbar-kuliner">
-        <a href="{{route('home')}}" class="nav-logo"
-          ><img
-            src="{{asset('css/assets')}}/logo-white.png"
-            alt=""
-        /></a>
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <div class="logo">
+          <a href="{{route('home')}}"><img src="{{asset('css/assets/logo-white.png')}}" class="putih" /></a>
         </div>
-        <ul class="nav-link">
-          <li class="nav-item2"><a href="{{ route('home') }}">HOME</a></li>
-          <li class="nav-item2"><a href="{{ route('destinasi') }}">DESTINASI</a></li>
-          <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
-          <li class="nav-item2"><a class="btn" href="{{ route('auth') }}">LOG IN</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div class="kuliner-nav">
-      <p><a href="{{ route('home') }}">Beranda</a> > UMKM</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-home navbar-nav">
+            <li><a class="nav-link" href="{{ route('home') }}">Home</a></lint=>
+            <li><a class="nav-link" href="{{ route('destinasi') }}">Destinasi</a></li>  
+            <li><a class="nav-link active-nav" href="{{ route('kuliner') }}">UMKM</a></li> 
+            <li><a class="nav-link" href="#">The Team</a></li> 
+            <li><a class="nav-link" href="{{ route('auth') }}">Login</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="judul-path">
+      <p><a href="{{ route('home') }}"> Beranda</a>
+        <span>> UMKM </span>
+      </p>
     </div>
-    <div class="kuliner-judul">
+    <div class="judul-page">
       <h2>PRODUK UMKM</h2>
     </div>
     <div><br /></div>
     <p class="kuliner-filter">
-      {{-- <button
-        class="btn btn-primary collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapse1"
-        aria-expanded="false"
-        aria-controls="collapse1"
-      >
-        Filter Wilayah
-      </button> --}}
 
       <button
         class="btn btn-primary collapsed"

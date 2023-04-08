@@ -33,26 +33,33 @@
 
   <body>
 
-    <header>
-        <nav class="navbar-destinasi">
-          <a href="{{route('home')}}" class="nav-logo"
-            ><img
-              src="{{ asset ('css/assets')}}/logo-white.png"
-              alt=""
-          /></a>
-          <ul class="nav-link">
-            <li class="nav-item2"><a href="{{ route('home') }}">HOME</a></li>
-            <li class="nav-item2"><a href="{{ route('destinasi') }}">DESTINASI</a></li>
-            <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
-            <li class="nav-item2"><a class="btn" href="{{ route('auth') }}">LOG IN</a></li>
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-fluid">
+        <div class="logo">
+          <a href="{{route('home')}}"><img src="{{asset('css/assets/logo-white.png')}}" class="putih" /></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-home navbar-nav">
+            <li><a class="nav-link" href="{{ route('home') }}">Home</a></lint=>
+            <li><a class="nav-link" href="{{ route('destinasi') }}">Destinasi</a></li>  
+            <li><a class="nav-link active-nav" href="{{ route('kuliner') }}">UMKM</a></li> 
+            <li><a class="nav-link" href="#">The Team</a></li> 
+            <li><a class="nav-link" href="{{ route('auth') }}">Login</a></li> 
           </ul>
-        </nav>
-      </header>
-
-    <div class="destinasi-nav">
-      <p><a href="{{ route('home') }}">Beranda</a> > Destinasi</p>
+        </div>
+      </div>
+    </nav>
+    <div class="judul-path">
+      <p><a href="{{ route('home') }}"> Beranda </a>
+        <span><a href="{{ route('destinasi') }}">> UMKM </span>
+          <span>> Deskripsi </span>
+      </p>
     </div>
-    <div class="destinasi-judul">
+
+    <div class="judul-page">
         <h2>PRODUK UMKM</h2>
       </div>
     

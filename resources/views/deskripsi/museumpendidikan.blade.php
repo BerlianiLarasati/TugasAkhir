@@ -32,24 +32,32 @@
   </head>
   <body>
     <header>
-      <nav class="navbar-destinasi">
-        <a href="" class="nav-logo"
-          ><img
-            src="{{ asset ('css/assets')}}/logo-white.png"
-            alt=""
-        /></a>
-        <ul class="nav-link">
-            <li class="nav-item2"><a href="{{ route('home') }}">Home</a></li>
-            <li class="nav-item2"><a href="{{ route('destinasi') }}">Destinasi</a></li>
-            <li class="nav-item2"><a href="{{ route('kuliner') }}">UMKM</a></li>
-            <li class="nav-item2"><a href="{{ route('auth') }}">Login</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+          <div class="logo">
+            <a href="{{route('home')}}"><img src="{{asset('css/assets/logo-white.png')}}" class="putih" /></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-home navbar-nav">
+              <li><a class="nav-link" href="{{ route('home') }}">Home</a></lint=>
+              <li><a class="nav-link active-nav" href="{{ route('destinasi') }}">Destinasi</a></li>  
+              <li><a class="nav-link" href="{{ route('kuliner') }}">UMKM</a></li> 
+              <li><a class="nav-link" href="#">The Team</a></li> 
+              <li><a class="nav-link" href="{{ route('auth') }}">Login</a></li> 
+            </ul>
+          </div>
+        </div>
       </nav>
-    </header>
-    <div class="destinasi-nav">
-      <p><a href="{{ route('home') }}">Beranda</a> > Destinasi Wisata</p>
-    </div>
-    <div class="destinasi-judul">
+      <div class="judul-path">
+        <p><a href="{{ route('home') }}"> Beranda </a>
+          <span><a href="{{ route('destinasi') }}">> Destinasi </span>
+            <span>> Deskripsi </span>
+        </p>
+      </div>
+    <div class="judul-page">
       <h2>MUSEUM PENDIDIKAN SURABAYA</h2>
     </div>
     <div class="card-body px-2 pt-6">

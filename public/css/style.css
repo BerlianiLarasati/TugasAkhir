@@ -1,18 +1,15 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     line-height: 20px;
     font-size: 15px;
 }
 
-html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-body {
+html, body {
+    width: 100%;
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -43,6 +40,7 @@ header .intro h3 {
     padding: 0;
 }
 
+/* ------------------STYLING NAVBAR-------------------------- */
 nav {
     z-index: 100;
     color: #fff;
@@ -73,7 +71,7 @@ nav {
 }
 
 .navbar-toggler {
-    background: #6868ac;
+    background: lightgray;
 }
 
 .navbar-home.navbar-nav a:hover {
@@ -138,7 +136,7 @@ nav .logo img {
 
 .navbar-home.navbar-nav li a.active-nav {
     margin-right: 10px;
-    color: #039be5;
+    color: #6091ff;
 }
 
 .navbar-home.navbar-nav li a.active-nav::before {
@@ -158,11 +156,8 @@ nav .logo img {
 }
 
 .navbar-home.navbar-nav li a.active-nav::after {
-    width: 40%;
+    width: 30%;
 }
-
-
-
 
 
 
@@ -392,40 +387,27 @@ nav .logo img.hitam {
 
 /* Section bagian icon tengah */
 
-.isi {
-    margin-top: 30px;
-}
-
-.isi-satu {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
 .isi-satu a {
-    padding: 10px 50px;
-    text-align: center;
     text-decoration: none;
     color: #6868ac;
 }
 
 .isi-satu a h6 {
     font-size: 14px;
-    margin: 10px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.isi-satu a h6:hover {
+    color: orange;
+    transition: all ease 0.5s;
 }
 
 /* video360 */
 .section-explore360 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-    padding: 0px 180px;
-    margin: 20px 20px 20px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-
-
 
 /* footer */
 .isi5 {
@@ -567,6 +549,7 @@ section .title-highlight {
 .img-hover {
     overflow: hidden;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .img-hover img {
@@ -723,45 +706,12 @@ footer .h5 .opsi {
 }
 
 /* @media screen and (max-width: 991.98px) {
-    .layout {
-        width: 90%;
-    }
-    nav .menu ul {
-        display: none;
-        margin-top: 60px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-    nav .menu ul li {
-        width: 100%;
-        border-bottom: 1px solid #ccc;
-        background-color: #fff;
-        line-height: 40px;
-    }
-    nav .menu ul li a {
-        color: #333;
-    }
-    .tombol-menu {
-        display: flex;
-    }
-    .blog .area {
-        display: block;
-    }
-    .blog div.area div {
-        width: 100%;
-    }
-    .blog .area .gambar {
-        border-radius: 5px 5px 0px 0px;
-        height: 200px;
-    }
-    .support {
-        display: block;
-    }
-    .support div {
-        width: 100%;
-        padding-bottom: 30px;
-    }
+
 } */
 
+@media only screen and (max-width: 480px) {
+    .title-highlight {
+        font-size: 28px;
+        line-height: 3rem;
+    }
+}
