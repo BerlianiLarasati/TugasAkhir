@@ -10,9 +10,9 @@ class KulinerPageController extends Controller
 {
     public function kuliner(Request $request)
         {
-        $kuliner= Kuliner::where('nama', 'like', "%" . $request->search . "%")->get();
-        // $kuliner = Kuliner::all();
-        return view('kuliner', ['kuliner'=>$kuliner]);
+        $kuliner= Kuliner::where('nama', 'like', "%" . $request->keyword . "%")
+        ->where('kategori', '=', $request->filter_kategori) ->get();;
+        return view('kuliner', compact('kuliner'));
         // return view('kuliner',compact('kuliner'));
         }
 }

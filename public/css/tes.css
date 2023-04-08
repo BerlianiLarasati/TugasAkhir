@@ -452,6 +452,7 @@ nav .logo img {
 
 .isifoot-content1 .row1 h6 {
   font-size: 18px;
+  color: white;
 }
 
 .isifoot-content2 .row1 h6 {
@@ -574,6 +575,11 @@ nav .logo img {
 .list3 .li1 a {
   text-decoration: none;
   color: white;
+}
+
+.deskripsi.card {
+  border: none;
+  color: #212526;
 }
 
 /* ------------------detail UMKM goes here wkwkwk cape banget gueeeee------------ */
