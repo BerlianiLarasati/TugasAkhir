@@ -30,38 +30,41 @@
           <form class="forms-sample">
             <div class="form-group">
               <label for="exampleInputName1">Nama</label>
-              <input name='name' type="text" class="form-control" id="name" placeholder="Name">
+              <input name='nama' type="text" class="form-control" value="{{ $kuliner->nama }}" id="name" placeholder="Name">
             </div>
             <div class="form-group">
               <label for="exampleSelectGender">Kategori</label>
-              <select name='address' class="form-control" id="exampleSelectGender">
-                <option selected>Pilih Kategori</option>
-                <option value="Kuliner">Kuliner</option>
-                <option value="Minuman">Minuman</option>
+              <select name='kategori' class="form-control" id="exampleSelectGender">
+                <option selected>{{ $kuliner->kategori }}</option>
+                <option value="Main Course">Main Course</option>
+                <option value="Beverages">Beverages</option>
                 <option value="Snack">Snack</option>
+                <option value="Food Court">Food Court</option>
               </select>
             </div>
             <div class="form-group">
               <label for="exampleInputCity1">Wilayah</label>
-              <input name='kategori' type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+              <input name='alamat' type="text" value="{{ $kuliner->alamat }}" class="form-control" id="exampleInputCity1" placeholder="Location">
             </div>
             <div class="form-group">
               <label>File upload</label>
-              <input name='foto' type="file" name="img[]" class="file-upload-default">
-              <div class="input-group col-xs-12">
-                <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                <span class="input-group-append">
-                  <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                </span>
-              </div>
+              <input name='foto' type="file" class="file-upload-default">
+              @if ($kuliner->foto)
+                <img src="{{ asset('storage/umkm/'.$kuliner->foto) }}" alt="" style="width: 100px; height: auto;">
+              @endif
             </div>
             <div class="form-group">
               <label for="exampleTextarea1">Deskripsi</label>
-              <textarea name='description' class="form-control" id="exampleTextarea1" rows="4"></textarea>
+              <textarea name='deskripsi' class="form-control" id="exampleTextarea1" rows="4">{{ $kuliner->deskripsi }}</textarea>
             </div>
-            <div class="row justify-content-end">
-              <a href="{{ route('contributor.datakuliner') }}" class="btn btn-secondary mr-2">Cancel</a>
-              <button type="submit" class="btn btn-primary mr-2">Submit</button>
+
+            <div class="row mt-4">
+              <div class="col-sm-6 text-start">
+                <a href="{{ route('contributor.datakuliner') }}" class="btn btn-secondary mr-2">Cancel</a>
+              </div>
+              <div class="col-sm-6 text-end">
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+              </div>
             </div>
           </form>
         </div>

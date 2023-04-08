@@ -38,13 +38,13 @@
                         <tbody>
                           @foreach ($kuliner as $row)
                           <tr>
-                            <td>{{$row->name}}</td>
+                            <td>{{$row->nama}}</td>
                             <td>{{$row->kategori}}</td>
                             <td>
-                              <img src="{{asset('fotokuliner/'.$row->foto)}}" alt="" style="width:50px;">
+                              <img src="{{asset('storage/umkm/'.$row->foto)}}" alt="" style="width:50px;">
                             </td>
-                            <td>{{$row->address}}</td>
-                            <td>{{$row->description}}</td>
+                            <td>{{$row->alamat}}</td>
+                            <td>{{$row->deskripsi}}</td>
                             <td>
                             <a href="/editkuliner/{{$row->id}}" class="btn btn-primary mb-2">Edit</a>
                             </td>
