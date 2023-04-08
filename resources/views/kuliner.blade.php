@@ -46,7 +46,7 @@
             <li><a class="nav-link" href="{{ route('home') }}">Home</a></lint=>
             <li><a class="nav-link" href="{{ route('destinasi') }}">Destinasi</a></li>  
             <li><a class="nav-link active-nav" href="{{ route('kuliner') }}">UMKM</a></li> 
-            <li><a class="nav-link" href="#">The Team</a></li> 
+            <li><a class="nav-link" href="{{route('team')}}">The Team</a></li> 
             <li><a class="nav-link" href="{{ route('auth') }}">Login</a></li> 
           </ul>
         </div>

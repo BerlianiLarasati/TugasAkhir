@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContributorController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DeskripsiController;
+use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -87,6 +88,8 @@ Route::get('home', [HomePageController::class, 'home'])->name('home');
 Route::get('destinasi', [DestinasiController::class, 'destinasi'])->name('destinasi');
 // Kuliner Page
 Route::get('kuliner', [KulinerPageController::class, 'kuliner'])->name('kuliner');
+// The Team Page
+Route::get('team', [TeamController::class, 'team'])->name('team');
 
 Route::get('deskripsi/museumpendidikan', [DeskripsiController::class, 'museumpendidikan'])->name('deskripsi.museumpendidikan');
 
