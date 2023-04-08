@@ -5,9 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Destination extends Model
+class destination extends Model
 {
     use HasFactory;
+
     
-    protected $fillable = ['name', 'kategori', 'address', 'address_url', 'foto', 'description'];
+    protected $fillable = [
+        'dest_name',
+        'dest_category',
+        'dest_location',
+        'dest_desc',
+        'dest_cover'
+    ];
+
+    public function photodests(){
+        return $this->hasMany(Photodest::class);
+    }
 }

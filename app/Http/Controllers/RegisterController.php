@@ -3,26 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
-class RegisterController extends Controller
+class registerController extends Controller
 {
-        // Menampilkan halaman pendaftaran
-        public function index () {
-            return view('auth.register');
-        }
-    
-        // Memproses pendaftaran
-        public function registration(Request $request)
-        {
-            User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-            ]);
-    
+    public function register(){
+        return view('register');
+    }
+
+    public function prosesRegister(Request $request){
+        $user = User::create([
+            'email' => $request -> email,
+            'password' => Hash::make($request ->password),
+            'name' => $request -> name,
+            'role' => $request -> role,
+        ]);
+
+        if($user){
+            Session::flash('berhasil', 'Berhasil Melakukan Registrasi');
             return redirect()->route('login');
+        }else{
+            Session::flash('gagal', 'Gagal Melakukan Registrasi');
         }
+    }
 }

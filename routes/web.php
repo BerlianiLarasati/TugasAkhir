@@ -1,13 +1,16 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\HomePageController;
-use App\Http\Controllers\DestinasiController;
-use App\Http\Controllers\KulinerPageController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ContributorController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DeskripsiController;
+use App\Http\Controllers\adminController;
+use App\Http\Controllers\umkmController;
+use App\Http\Controllers\CumkmController;
+use App\Http\Controllers\contriController;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\logoutController;
+use App\Http\Controllers\registerController;
+use App\Http\Controllers\Controller;
+use App\Http\Middleware\contri;
+use App\Models\event;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,73 +24,64 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Public
+Route::get('/', [homeController::class, 'home'])->name('home');
+Route::get('/dest', [homeController::class, 'destinasi'])->name('publicDestinasi');
+Route::get('dest/detail/{id}', [homeController::class, 'detail'])->name('detailDestinasi');
+Route::get('/dest/filter', [homeController::class, 'filter'])->name('filterDestinasi');
+Route::get('/usaha', [homeController::class, 'umkm'])->name('publicUmkm');
+Route::get('usaha/detail/{id}', [homeController::class, 'detailUmkm'])->name('detailUmkm');
+Route::get('/usaha/filter', [homeController::class, 'filterUmkm'])->name('filterUmkm');
 
-// Authentication
-// Register
-Route::get('register', [RegisterController::class, 'index'])->name('register');
-Route::post('register', [RegisterController::class, 'registration'])->name('register.registration');
+// Proses Registrasi
+Route::get('/login', [loginController::class, 'login'])->name('login');
+Route::get('/register', [registerController::class, 'register'])->name('register');
+Route::post('/register/proses', [registerController::class, 'prosesRegister'])->name('prosesRegister');
 
-// Login
-Route::get('login', [LoginController::class, 'index'])->middleware('guest')->name('login');
-Route::post('login', [LoginController::class, 'authenticate'])->name('auth');
-Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+// Proses Login dengan admin atau contri
+Route::post('/login/proses', [loginController::class, 'prosesLogin'])->name('prosesLogin');
+route::get('logout', [logoutController::class, 'logout'])->name('logout');
 
+// Admin 
+Route::get('admin', [homeController::class, 'admin'])->name('admin')->middleware('auth', 'admin');
+// Destinasi
+Route::get('admin/destinasi', [adminController::class, 'index'])->name('destinasi')->middleware('auth', 'admin');
+Route::get('admin/destinasi/tambah', [adminController::class, 'tambahDestinasi'])->name('tambahDestinasi')->middleware('auth', 'admin');
+Route::post('admin/destinasi/store', [adminController::class, 'store'])->name('storeDestinasi')->middleware('auth', 'admin');
+Route::get('admin/destinasi/delete/{id}', [adminController::class, 'delete'])->name('deleteDestinasi')->middleware('auth', 'admin');
+Route::get('admin/destinasi/edit/{id}', [adminController::class, 'edit'])->name('editDestinasi')->middleware('auth', 'admin');
+Route::post('admin/destinasi/update/{id}', [adminController::class, 'update'])->name('updateDestinasi')->middleware('auth', 'admin');
+Route::delete('admin/destinasi/delete/{id}', [adminController::class, 'delete'])->name('deleteDestinasi')->middleware('auth', 'admin');
+Route::get('admin/destinasi/search', [adminController::class, 'search'])->name('searchDestinasi');
 
-// Administrator
-Route::get('Beranda', [AdminController::class, 'index'])->middleware('auth')->name('admin.beranda');
-/// Administrator-Destinasi
-Route::get('admin/datadestinasi', [AdminController::class, 'datadestinasi'])->name('admin.datadestinasi');
-Route::get('admin/destinasi/form', [AdminController::class, 'destinasiForm'])->name('admin.destinasi.form');
-Route::get('deskripsi/deskripsidestinasi/{id}',[AdminController::class, 'deskripsidestinasi'])->name('deskripsidestinasi');
-//CRUD Destinasi
-Route::post('/insertdestinasi',[AdminController::class, 'insertdestinasi'])->name('insertdestinasi');
-Route::post('/updatedestinasi/{id}',[AdminController::class, 'updatedestinasi'])->name('updatedestinasi');
-Route::get('/editdestinasi/{id}',[AdminController::class, 'editdestinasi'])->name('editdestinasi');
-Route::get('/deletedestinasi/{id}',[AdminController::class, 'deletedestinasi'])->name('deletedestinasi');
-// Administrasi-Kuliner
-Route::get('admin/datakuliner', [AdminController::class, 'datakuliner'])->name('admin.datakuliner');
-Route::get('admin/kuliner/form', [AdminController::class, 'kulinerForm'])->name('admin.kuliner.form');
-Route::get('deskripsi/deskripsikuliner/{id}',[AdminController::class, 'deskripsikuliner'])->name('deskripsikuliner');
-//CRUD Kuliner
-Route::post('/insertkuliner',[AdminController::class, 'insertkuliner'])->name('insertkuliner');
-Route::post('/updatekuliner/{id}',[AdminController::class, 'updatekuliner'])->name('updatekuliner');
-Route::get('/editkuliner/{id}',[AdminController::class, 'editkuliner'])->name('editkuliner');
-Route::get('/deletekuliner/{id}',[AdminController::class, 'deletekuliner'])->name('deletekuliner');
+// umkm
+Route::get('admin/umkm', [umkmController::class, 'indexUmkm'])->name('umkm')->middleware('auth', 'admin');
+Route::get('admin/umkm/tambah', [umkmController::class, 'tambahUmkm'])->name('tambahUmkm')->middleware('auth', 'admin');
+Route::post('admin/umkm/store', [umkmController::class, 'storeUmkm'])->name('storeUmkm')->middleware('auth', 'admin');
+Route::get('admin/umkm/edit/{id}', [umkmController::class, 'editUmkm'])->name('editUmkm')->middleware('auth', 'admin');
+Route::get('admin/umkm/delete/{id}', [umkmController::class, 'deleteUmkm'])->name('deleteUmkm')->middleware('auth', 'admin');
+Route::post('admin/umkm/update/{id}', [umkmController::class, 'updateUmkm'])->name('updateUmkm')->middleware('auth', 'admin');
+Route::delete('admin/umkm/delete/{id}', [umkmController::class, 'deleteUmkm'])->name('deleteUmkm')->middleware('auth', 'admin');
+Route::get('admin/umkm/search', [umkmController::class, 'searchUmkm'])->name('searchUmkm');
 
+//Contri 
+Route::get('contri', [homeController::class, 'contri'])->name('contri')->middleware('auth', 'contri');
 
-// Kontributor
-Route::get('beranda', [ContributorController::class, 'index'])->middleware('auth')->name('contributor.beranda');
-// Kontributor-Destinasi
-Route::get('contributor/datadestinasi', [ContributorController::class, 'datadestinasi'])->name('contributor.datadestinasi');
-Route::get('contributor/destinasi/form', [ContributorController::class, 'destinasiForm'])->name('contributor.destinasi.form');
-Route::get('deskripsi/deskripsidestinasi/{id}',[ContributorController::class, 'deskripsidestinasi'])->name('deskripsidestinasi');
-//CRUD Destinasi
-Route::post('/insertdestinasi',[ContributorController::class, 'insertdestinasi'])->name('insertdestinasi');
-Route::post('/updatedestinasi/{id}',[ContributorController::class, 'updatedestinasi'])->name('updatedestinasi');
-Route::get('/editdestinasi/{id}',[ContributorController::class, 'editdestinasi'])->name('editdestinasi');
-// Kontributor-Kuliner
-Route::get('contributor/datakuliner', [ContributorController::class, 'datakuliner'])->name('contributor.datakuliner');
-Route::get('contributor/kuliner/form', [ContributorController::class, 'kulinerForm'])->name('contributor.kuliner.form');
-Route::get('deskripsi/deskripsidestinasi/{id}',[ContributorController::class, 'deskripsidestinasi'])->name('deskripsidestinasi');
-Route::get('deskripsi/deskripsikuliner/{id}',[ContributorController::class, 'deskripsikuliner'])->name('deskripsikuliner');
-//CRUD Kuliner
-Route::post('/insertkuliner',[ContributorController::class, 'insertkuliner'])->name('insertkuliner');
-Route::post('/updatekuliner/{id}',[ContributorController::class, 'updatekuliner'])->name('updatekuliner');
-Route::get('/editkuliner/{id}',[ContributorController::class, 'editkuliner'])->name('editkuliner');
+//Destinasi 
+Route::get('contri/destinasi', [contriController::class, 'index'])->name('destinasic')->middleware('auth', 'contri');
+Route::get('contri/destinasi/tambah', [contriController::class, 'tambahDestinasi'])->name('tambahDestinasic')->middleware('auth', 'contri');
+Route::post('contri/destinasi/store', [contriController::class, 'store'])->name('storeDestinasic')->middleware('auth', 'contri');
+Route::get('contri/destinasi/delete/{id}', [contriController::class, 'delete'])->name('deleteDestinasic')->middleware('auth', 'contri');
+Route::get('contri/destinasi/edit/{id}', [contriController::class, 'edit'])->name('editDestinasic')->middleware('auth', 'contri');
+Route::post('contri/destinasi/update/{id}', [contriController::class, 'update'])->name('updateDestinasic')->middleware('auth', 'contri');
+Route::delete('contri/destinasi/delete/{id}', [contriController::class, 'delete'])->name('deleteDestinasic')->middleware('auth', 'contri');
+Route::get('contri/destinasi/search', [contriController::class, 'search'])->name('searchDestinasic');
 
-
-
-//Templating View
-//Home Landing Page
-Route::get('home', [HomePageController::class, 'home'])->name('home');
-// Destinasi Page
-Route::get('destinasi', [DestinasiController::class, 'destinasi'])->name('destinasi');
-// Kuliner Page
-Route::get('kuliner', [KulinerPageController::class, 'kuliner'])->name('kuliner');
-
-Route::get('deskripsi/museumpendidikan', [DeskripsiController::class, 'museumpendidikan'])->name('deskripsi.museumpendidikan');
-
-Route::get('deskripsi/tehrosella', [DeskripsiController::class, 'tehrosella'])->name('deskripsi.tehrosella');
+// umkm
+Route::get('contri/umkm', [CumkmController::class, 'indexUmkmc'])->name('umkmc')->middleware('auth', 'contri');
+Route::get('contri/umkm/tambah', [CumkmController::class, 'tambahUmkmc'])->name('tambahUmkmc')->middleware('auth', 'contri');
+Route::post('contri/umkm/store', [CumkmController::class, 'storeUmkmc'])->name('storeUmkmc')->middleware('auth', 'contri');
+Route::get('contri/umkm/edit/{id}', [CumkmController::class, 'editUmkmc'])->name('editUmkmc')->middleware('auth', 'contri');
+Route::post('contri/umkm/update/{id}', [CumkmController::class, 'updateUmkmc'])->name('updateUmkmc')->middleware('auth', 'contri');
+Route::delete('contri/umkm/delete/{id}', [CumkmController::class, 'deleteUmkmc'])->name('deleteUmkmc')->middleware('auth', 'contri');
+Route::get('contri/umkm/search', [CumkmController::class, 'searchUmkmc'])->name('searchUmkmc');

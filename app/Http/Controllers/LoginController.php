@@ -2,47 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Session;
 
-class LoginController extends Controller
+class loginController extends Controller
 {
-    /**
-     * show the login page
-     * 
-     */
-    public function index()
-    {
-        return view('auth.login');
+    public function login(){
+        return view('login');
     }
 
-        /**
-     * authentication login 
-     * 
-     */
-    public function authenticate(Request $request)
-    {
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-            // Authentication passed...
-            if(auth()->user()->role_id == '1'){
-                return redirect()->route('admin.beranda');
-            }else{
-                return redirect()->route('contributor.beranda');
+    public function prosesLogin(Request $request){
+        $data = [
+            'email' => $request->email,
+            'password' =>$request->password
+        ];
+
+        if(Auth::attempt($data)){
+            // dd('Berhasil Login');
+            $role = Auth::user()->role;
+            if($request->user()->role == User::ROLE_ADMIN){
+                return redirect()->route('admin');
+            }else {
+                return redirect()->route('contri');
             }
+        }else{
+            // dd('Gagal Login');
+            Session::flash('gagal','Email / Password Anda Salah');
+            return redirect()->route('login');
         }
-        return redirect()->back()->with('message', 'Email atau Password anda salah!');
-    }
-
-    /**
-     * Logout 
-     * 
-     */
-    public function logout()
-    {
-        Auth::logout();
-
-        return redirect()->intended('login');
     }
 }
