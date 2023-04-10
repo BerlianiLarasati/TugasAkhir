@@ -23,10 +23,10 @@ class homeController extends Controller
 
     public function destinasi(Request $request){
         if($request ->has('filter_kategori', 'keyword')){
-            $destinasi = destination::where('dest_name', 'LIKE', '%' . $request->keyword . '%')
+            $destinasi = Destination::where('dest_name', 'LIKE', '%' . $request->keyword . '%')
             ->where('dest_category', '=', $request->filter_kategori)->paginate(6);
         } else {
-            $destinasi = destination::paginate(6);
+            $destinasi = Destination::paginate(6);
         }
         return view('destinasi',compact('destinasi'));
     }
@@ -42,7 +42,7 @@ class homeController extends Controller
     }
 
     public function detail($id){
-        $destinasi = destination::findOrFail($id);
+        $destinasi = Destination::findOrFail($id);
         return view('detaildestinasi', compact('destinasi'));
     }
 
