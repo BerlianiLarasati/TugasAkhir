@@ -135,7 +135,7 @@ class umkmController extends Controller
                 ->orWhere('umkm_onlineshop', 'LIKE', '%' . $request->search . '%')
                 ->paginate(2);
         } else {
-            $umkm = event::all();
+            $umkm = Umkm::all();
         }
 
         return view('admin.umkm.home', compact('umkm'));
