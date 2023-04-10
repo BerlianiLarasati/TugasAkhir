@@ -16,11 +16,6 @@ use Illuminate\Support\Facades\File;
 
 class adminController extends Controller
 {
-    private adminServices $adminServices;
-    public function __construct(adminServices $adminServices)
-    {
-        $this->adminServices = $adminServices;
-    }
 
     public function index()
     {
