@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wisata Surabaya</title>
-    <link rel="shortcut icon" href="assets/img/header/logos.png" />
+    <link rel="shortcut icon" href="{{asset('/adminto/images/surabaya-shortcuticon.png')}}">
 
     <!-- CDN Vue JS -->
     {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script> --}}
@@ -17,220 +17,169 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href=" {{ asset('assets/css/styles.css') }} ">
+    <link rel="stylesheet" href="{{ asset('assets/css/all-style.css') }}">
 
 </head>
 
 <body>
     <!-- Navigasi -->
     <section class="navigasi">
-        <nav class="navbar navbar-expand-lg box-navbar" data-bs-theme="white">
-            <div class="container p-2">
-                <a class="navbar-brand ms-3" href="#">
-                    <img src="{{ asset('assets/img/header/surabaya.png') }}" alt="Bootstrap" width="105px">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid">
+                <div class="logo">
+                <a href="{{route('home')}}"><img src="{{asset('/assets/img/header/surabaya.png')}}" class="putih" /></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end
-                        me-4"
-                    id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                style="font-size: 20px;
-                                    font-weight: 500;"
-                                href="{{ route('home') }}">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                style="font-size: 20px;
-                                    font-weight: 500;"
-                                href="{{ route('publicDestinasi') }}">Destinasi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                style="font-size: 20px;
-                                    font-weight: 500;"
-                                href="{{ route('publicUmkm') }}">Umkm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                                style="font-size: 20px;
-                                    font-weight: 500;"
-                                href="{{ route('login') }}">Login</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-home navbar-nav">
+                    <li><a class="nav-link" href="{{ route('home') }}">Home</a></lint=>
+                    <li><a class="nav-link" href="{{ route('publicDestinasi') }}">Destinasi</a></li>   
+                    <li><a class="nav-link active-nav" href="{{ route('publicUmkm') }}">UMKM</a></li> 
+                    <li><a class="nav-link" href="{{ route('aboutus') }}">About Us</a></li> 
+                    <li><a class="nav-link" href="{{ route('login') }}">Login</a></li> 
+                </ul>
                 </div>
             </div>
         </nav>
     </section>
 
     <!-- Judul -->
-    <section class="judul mt-5 mb-5">
-        <div class="text-center">
-            <h2 class="text-uppercase font-weight-bold mb-4">UMKM Surabaya</h2>
-        </div>
-    </section>
+    <div class="judul-path">
+        <p><a href="{{ route('home') }}"> Beranda</a>
+            <span>> Produk UMKM </span>
+        </p>
+    </div>
+    <div class="judul-page">
+        <h2>PRODUK UMKM</h2>
+    </div>
 
     <!-- Isi Content -->
-    <section class="mb-5 mt-3">
+    <section>
         <div id="app">
 
 
             <div class="container">
-                <form action="{{ route('filterUmkm') }}" method="GET">
-                    <div class="accordion-reedit row" id="accordionPanelsStayOpenExample">
-
-                        <div class="accordion-item accordion-toggle col-8" style="border: 2px solid #ccc;">
-                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapseOne">
-                                    <span class="font-weight-bold"
-                                        style="font-size: 20px;
-                                            color: #6868ac;">Filter
-                                        Kategori</span>
-                                </button>
-                            </h2>
+                <form action="">
+                    <p class="destinasi-filter">
+                      
+                      <button
+                        class="btn btn-primary collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse2"
+                        aria-expanded="false"
+                        aria-controls="collapse2"
+                      >
+                        Filter Kategori
+                      </button>
+                
+                      <button
+                        class="btn btn-primary collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse3"
+                        aria-expanded="false"
+                        aria-controls="collapse3"
+                      >
+                        Filter Keyword
+                      </button>
+                
+                      <button type="submit" class="btn btn-primary filter">
+                        <i class="fa fa-fw fa-search"></i>
+                        Filter
+                      </button>
+                    </p>
+                
+                    <div class="container">
+                      
+                      <div class="collapse" id="collapse2">
+                        <div class="filter card card-body" style="align-items: baseline">
+                          Filter Kategori
+                          <ul class="list1">
+                            <li>
+                              <input
+                                type="radio"
+                                name="filter_kategori"
+                                value="Foods & Beverages"
+                                @if (
+                                  app('request')->input('filter_kategori')=='Foods & Beverages' 
+                               )
+                               checked    
+                               @endif />
+                              <span>Foods & Beverages</span>
+                            </li>
+                            <li>
+                              <input type="radio" name="filter_kategori" value="Decoration"
+                              @if (
+                                 app('request')->input('filter_kategori')=='Decoration' 
+                              )
+                              checked    
+                              @endif />
+                              <span>Decoration</span>
+                            </li>
+                            <li>
+                              <input type="radio" name="filter_kategori" value="Jewelries & Accessories" 
+                                @if (
+                                    app('request')->input('filter_kategori')=='Jewelries & Accessories' 
+                                )
+                                checked    
+                                @endif />
+                              <span>Jewelries & Accessories</span>
+                            </li>
+                            <li>
+                              <input type="radio" name="filter_kategori" value="Fashion"
+                                @if (
+                                    app('request')->input('filter_kategori')=='Fashion' 
+                                )
+                                checked    
+                                @endif />
+                              <span>Fashion</span>
+                          </ul>
                         </div>
-                        <button type="submit" class="badge badge-primary tester col-4"><i
-                                class="fa fa-fw fa-search"></i> Filter</button>
-
-                        <div id="panelsStayOpen-collapseOne"
-                            class="accordion-collapse
-                                collapse"
-                            aria-labelledby="panelsStayOpen-headingOne" style="border: 2px solid #ccc;">
-                            <div class="accordion-body">
-
-                                <!-- Radio Button -->
-
-                                <div class="p-2">
-                                    <div class="form-check ">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Kuliner">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Kuliner
-                                        </label>
-                                    </div>
-
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Fashion">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Fashion
-                                        </label>
-                                    </div>
-
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Pendidikan">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Pendidikan
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Otomotif">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Otomotif
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Agribisnis">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Agribisnis
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Tour & Travel">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Tour & Travel
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Produk Kreatif">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Produk Kreatif
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Teknologi Internet">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Teknologi Internet
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Kecantikan">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Kecantikan
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Event Organizer">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Event Organizer
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Jasa Kebersihan">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Jasa Kebersihan
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="selectcategory"
-                                            id="flexRadioDefault1" value="Kebutuhan Anak">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Kebutuhan Anak
-                                        </label>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                      </div>
+                    
+                      <div class="collapse" id="collapse3">
+                        <div class="card card-body" style="align-items: baseline">
+                          <h6>Filter Kata Kunci</h6>
+                          <div class="form-group">
+                            <input type="text" class="form-control" style="width: 1200px" name="keyword" value="{{ app('request')->input('keyword') }}" />
+                          </div>
                         </div>
+                      </div>
+                    
+                
                     </div>
-                </form>
+                  </form>
 
                 {{-- Filter End --}}
 
 
-                <div class="container text-center">
+                <div class="container">
                     <div class="row">
                         @foreach ($umkm as $ev)
-                            <div class="col-4">
+                            <div class="umkm col-3">
                                 <a href="{{ route('detailUmkm', [$ev->id]) }}" style="text-decoration: none; ">
-                                    <div class="mb-2 mt-3 img-rounded-hover-effect">
-                                        <img src="{{ asset('cover/' . $ev->umkm_cover) }}" alt="Event"
-                                            class="img-fluid">
+                                    <div class="img-border-umkm">
+                                        <div class="img-border-umkm">
+                                            <img src="{{ asset('cover/' . $ev->umkm_cover) }}" alt="Event"
+                                                class="umkm img-fluid">
+                                        </div>
                                     </div>
-                                    <div>
-                                        <span class="badge badge-primary"> {{ $ev->umkm_kategori }}
-                                        </span>
-                                    </div>
-                                    <hr class="mt-2 mb-2 badge-primary"
-                                        style="border: 1.5px solid
-                                        #6868ac; border-radius: 5px" />
-                                    <div>
-                                        <h5 class='font-weight-bold' style="color: black"> {{ $ev->umkm_produk }} </h5>
-                                        <h6 style="color: black">
-                                            <i
-                                                class="fa fa-fw
-                                                fa-map-marker-alt"></i>
-                                            {{ $ev->umkm_alamat }}
-                                        </h6>
+                                    <div style="margin-left: 10px">
+                                        <div>
+                                            <span class="badge badge-primary"> {{ $ev->umkm_kategori }}
+                                            </span>
+                                        </div>
+                                        <div class="mt-2 mb-2 badge-primary"></div>
+                                        <div>
+                                            <h5 class='font-weight-bold' style="color: black"> {{ $ev->umkm_produk }} </h5>
+                                            <h6 style="color: black">
+                                                <i class="fas fa-store"></i>
+                                                {{ $ev->umkm_toko }}
+                                            </h6>
+                                        </div>
                                     </div>
                                 </a>
                             </div>
@@ -246,164 +195,117 @@
     </section>
 
     <!-- Footer -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"
-        style="transform:rotate(180deg);margin-bottom:-1px">
-        <path class="elementor-shape-fill" fill="#4a4a8a" opacity="0.33"
-            d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7
-                    c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
+      <!-- dekorasi footer -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" style="transform:rotate(180deg);margin-bottom:-5px">
+        <path class="elementor-shape-fill" fill="#4a4a8a" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
         </path>
-        <path class="elementor-shape-fill" fill="#4a4a8a" opacity="0.66"
-            d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1
-                    s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
-        </path>
-        <path class="elementor-shape-fill" fill="#4a4a8a"
-            d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0
-                    h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z">
-        </path>
-    </svg>
-    <footer class="footer">
-        <div class="pb-3" style="background: #4a4a8a;">
-            <div class="container">
-
-                <!-- Find Us -->
-                <div class="row">
-                    <div class="col-3 mb-5 mt-5 ms-4">
-                        <div class="title-tag mb-5">
-                            <h6>FIND US</h6>
-                        </div>
-                        <div class="footer-link mb-2">
-                            <a href="#">
-                                Tourism Information Center <br>
-                                Jl. Gubernur Suryo 15
-                            </a>
-                        </div>
-                        <div class="hubungi-kami">
-                            <button>
-                                <a href="#"
-                                    class="btn btn-white
-                                            font-weight-bold
-                                            telpon-icon">
-                                    <i
-                                        class="fa fa-fw fa-phone
-                                                telpon-icon"></i>
-                                    Kontak Kami
-                                </a>
-                            </button>
-                        </div>
-                        <div class="icon mt-3">
-                            <button type="button" class="btn btn-light" style="border-radius: 30px;">
-                                <div>
-                                    <i
-                                        class="fa-brands fa-facebook
-                                                facebook-icon"></i>
-                                </div>
-                            </button>
-                            <button type="button" class="btn btn-light
-                                        ms-3"
-                                style="border-radius: 30px;">
-                                <div>
-                                    <i class="fa-brands fa-instagram "></i>
-                                </div>
-                            </button>
-                        </div>
+        <path class="elementor-shape-fill" fill="#4a4a8a" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
+        <path class="elementor-shape-fill" fill="#4a4a8a" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+      </svg>
+      <!-- footer -->
+      <footer style="background-color: #4a4a8a; ">
+            <div class="isi5" >
+                <div class="isi5-content1">
+                    <div class="row1">
+                        <h6>FIND US</h6>
                     </div>
-
-                    <!-- Contact Us -->
-                    <div class="col-4 mb-5 mt-5">
-                        <div class="title-tag mb-5">
-                            <h6>CONTACT US</h6>
-                        </div>
-                        <div class="footer-link mb-2">
-                            <p>
-                                Dinas Kebudayaan, Kepemudaan dan
-                                Olahraga <br />serta
-                                Pariwisata Kota Surabaya Kota Surabaya
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-2 footer-link">
-                                <span
-                                    class="fa fa-lg fa-fw
-                                            fa-map-marker-alt"></span>
-                            </div>
-                            <div class="col-10">
-                                <p>
-                                    Jl. Tunjungan No.1-3 Kelurahan
-                                    Genteng <br />
-                                    Kecamatan Genteng, Kota Surabaya<br />
-                                    Jawa Timur, Indonesia, 60275
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-2 footer-link">
-                                <span class="fa fa-lg fa-fw fa-phone"></span>
-                            </div>
-                            <div class="col-10">
+                    <div class="row2">
+                        <ul class="list1">
+                            <li class="li1">
+                                <a href="http://">Tourism Information Center <br> Jl. Gubernur Suryo 15</a>
+                            </li>
+                            <li class="li2">
+                                <a href=""><i class="fa fa-fw fa-phone"></i> Kontak Kami</a>
+                            </li>
+                            <li class="li3">
+                                <a href=""><i class="fab fa-lg fa-facebook text-white" aria-hidden="true"></i> </a>
+                                &nbsp;
+                                <a href=""></a><i class="fab fa-lg fa-instagram text-white" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="isi5-content2">
+                    <div class="row1">
+                        <h6>CONTACT US</h6>
+                        <p>
+                            Dinas Kebudayaan, Kepemudaan dan Olahraga serta Pariwisata Kota Surabaya Kota Surabaya
+                        </p>
+                        <ul class="list2">
+                            <li class="li1">
+                                    <i class="fa fa-fw fa-map-marker-alt"></i>
+                                    <p>
+                                        Jl. Tunjungan No.1-3 Kelurahan Genteng <br>
+                                        Kecamatan Genteng, Kota Surabaya <br>
+                                        Jawa Timur, Indonesia, 60275
+                                    </p>
+                            </li>
+                            <li class="li2" style="margin-top: 20px">
+                                <i class="fa fa-lg fa-fw fa-phone pull-left"></i>
                                 <p>
                                     031-5318409
                                 </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-2 footer-link">
-                                <span
-                                    class="fa fa-lg fa-fw
-                                            fa-envelope"></span>
-                            </div>
-                            <div class="col-10">
-                                <p>
-                                    disbudporapar@surabaya.go.id
-                                </p>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="li3">
+                                <i class="fa fa-lg fa-fw fa-envelope"></i>
+                                    <p>
+                                        disbudporapar@surabaya.go.id
+                                    </p>
+                            </li>
+                        </ul>
                     </div>
-
-                    <!-- Our Other Sites -->
-                    <div class="col-3 mb-5 mt-5">
-                        <div class="title-tag mb-5">
-                            <h6>OUR OTHER SITES</h6>
-                        </div>
-                        <div class="footer-link mb-3">
-                            <a href="#">
-                                Disbudporapar <br />Surabaya
-                            </a>
-                        </div>
-                        <div class="footer-link mb-2">
-                            <a href="#">
-                                360° Surabaya
-                            </a>
-                        </div>
-                        <div class="footer-link mb-2">
-                            <a href="#">
-                                Tiket Wisata Surabaya
-                            </a>
-                        </div>
-                        <div class="footer-link mb-3">
-                            <a href="#">
-                                Katalog Museum <br /> Surabaya
-                            </a>
-                        </div>
-                        <div class="footer-link mb-3">
-                            <a href="#">
-                                Bangga Surabaya
-                            </a>
-                        </div>
+                    <div class="row2"></div>
+                </div>
+                <div class="isi5-content3">
+                    <div class="row1">
+                        <h6>OUR OTHER SITE</h6>
                     </div>
-
-                    <!-- Wisata Surabaya -->
-                    <div class="col-1 mb-5 mt-5">
-                        <div class="title-tag mb-5">
-                            <h6>WISATA SURABAYA</h6>
-                        </div>
+                    <div class="row2">
+                        <ul class="list3">
+                            <li class="li1">
+                                <a href="https://disbudporapar.surabaya.go.id">
+                                    Disbudporapar Surabaya
+                                </a>
+                            </li>
+                            <li class="li1">
+                                <a href="https://virtualtourism.surabaya.go.id">
+                                    360° Surabaya
+                                </a>
+                            </li>
+                            <li class="li1">
+                                <a href="https://tiketwisata.surabaya.go.id">
+                                    Tiket Wisata Surabaya
+                                </a>
+                            </li>
+                            <li class="li1">
+                                <a href="https://ka-mus.surabaya.go.id">
+                                    Katalog Museum Surabaya
+                                </a>
+                            </li>
+                            <li class="li1">
+                                <a href="https://bangga.surabaya.go.id/">
+                                    Bangga Surabaya
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <div class="isi5-content4">
+                    <div class="row1">
+                        <h6>WISATA SURABAYA</h6>
+                    </div>
+                    <div class="row2"></div>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+      </footer>
+    </div>
+    <!-- source -->
+    <script src="javascript.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
 </body>
 
 </html>

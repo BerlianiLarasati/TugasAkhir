@@ -8,6 +8,7 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\logoutController;
 use App\Http\Controllers\registerController;
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\contri;
 use App\Models\event;
@@ -85,3 +86,6 @@ Route::get('contri/umkm/edit/{id}', [CumkmController::class, 'editUmkmc'])->name
 Route::post('contri/umkm/update/{id}', [CumkmController::class, 'updateUmkmc'])->name('updateUmkmc')->middleware('auth', 'contri');
 Route::delete('contri/umkm/delete/{id}', [CumkmController::class, 'deleteUmkmc'])->name('deleteUmkmc')->middleware('auth', 'contri');
 Route::get('contri/umkm/search', [CumkmController::class, 'searchUmkmc'])->name('searchUmkmc');
+
+// The Team Page
+Route::get('aboutus', [AboutUsController::class, 'aboutus'])->name('aboutus');

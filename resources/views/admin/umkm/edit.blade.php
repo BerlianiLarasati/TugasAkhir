@@ -41,18 +41,17 @@
                                     <div class="form-group mb-3">
                                         <label for="title">Kategori UMKM</label>
                                         <select name="umkm_kategori" class="form-select" aria-label="Default select">
-                                            <option selected>Pilih Kategori</option>
-                                            <option value="Fashion"> Kuliner</option>
-                                            <option value="Fashion"> Fashion</option>
-                                            <option value="Pendidikan"> Pendidikan</option>
-                                            <option value="Otomotif"> Otomotif</option>
-                                            <option value="Agribisnis"> Agribisnis</option>
-                                            <option value="Tour & Travel"> Tour & Travel</option>
-                                            <option value="Produk Kreatif"> Produk Kreatif</option>
-                                            <option value="Teknologi Internet"> Teknologi Internet</option>
-                                            <option value="Event Organizer"> Event Organizer</option>
-                                            <option value="Jasa Kebersihan"> Jasa Kebersihan</option>
-                                            <option value="Kebutuhan Anak"> Kebutuhan Anak</option>
+                                            <option @if ($umkm->umkm_produk=='Kuliner') selected @endif > Kuliner</option>
+                                            <option @if ($umkm->umkm_produk=='Fashion') selected @endif> Fashion</option>
+                                            <option @if ($umkm->umkm_produk=='Pendidikan') selected @endif> Pendidikan</option>
+                                            <option @if ($umkm->umkm_produk=='Otomotif') selected @endif> Otomotif</option>
+                                            <option @if ($umkm->umkm_produk=='Agribisnis') selected @endif> Agribisnis</option>
+                                            <option @if ($umkm->umkm_produk=='Tour & Travel') selected @endif> Tour & Travel</option>
+                                            <option @if ($umkm->umkm_produk=='Produk Kreatif') selected @endif> Produk Kreatif</option>
+                                            <option @if ($umkm->umkm_produk=='Teknologi Internet') selected @endif> Teknologi Internet</option>
+                                            <option @if ($umkm->umkm_produk=='Event Organizer') selected @endif> Event Organizer</option>
+                                            <option @if ($umkm->umkm_produk=='Jasa Kebersihan') selected @endif> Jasa Kebersihan</option>
+                                            <option @if ($umkm->umkm_produk=='Kebutuhan Anak') selected @endif> Kebutuhan Anak</option>
                                         </select>
                                     </div>
                                     <div class="form-group mb-3">

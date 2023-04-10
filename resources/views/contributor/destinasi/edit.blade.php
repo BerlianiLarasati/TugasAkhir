@@ -39,11 +39,10 @@
                                 <div class="form-group mb-3">
                                     <label for="title">Destinasi Kategori</label>
                                     <select name="dest_category" class="form-select" aria-label="Default select">
-                                        <option selected>Pilih Kategori</option>
-                                        <option> Pusat Perbelanjaan</option>
-                                        <option> Monumen</option>
-                                        <option> Religi</option>
-                                        <option> Nature and Outdoor</option>
+                                        <option @if ($destinasi->dest_category=='Pusat Perbelanjaan') selected @endif > Pusat Perbelanjaan</option>
+                                        <option @if ($destinasi->dest_category=='Monumen') selected @endif> Monumen</option>
+                                        <option @if ($destinasi->dest_category=='Religi') selected @endif> Religi</option>
+                                        <option @if ($destinasi->dest_category=='Nature and Outdoor') selected @endif> Nature and Outdoor</option>
                                     </select>
                                 </div>
                                 <div class="form-group mb-3">

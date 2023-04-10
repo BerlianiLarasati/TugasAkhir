@@ -14,19 +14,6 @@
 
             <p class="text-muted left-user-info">SuperAdmin</p>
 
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a href="#" class="text-muted left-user-info">
-                        <i class="mdi mdi-cog"></i>
-                    </a>
-                </li>
-
-                <li class="list-inline-item">
-                    <a href="#">
-                        <i class="mdi mdi-power"></i>
-                    </a>
-                </li>
-            </ul>
         </div>
 
         <!--- Sidemenu -->

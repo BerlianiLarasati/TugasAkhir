@@ -1,4 +1,4 @@
-<nav aria-label="Page navigation example">
+<div aria-label="Page navigation example">
     @if ($paginator->hasPages())
         <ul class="pagination justify-content-center mt-5">
             @if ($paginator->onFirstPage())
@@ -51,7 +51,7 @@
             @endif
         </ul>
     @endif
-</nav>
+</div>
 
 
 
