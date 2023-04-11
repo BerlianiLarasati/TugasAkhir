@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\destination;
 use App\Models\Umkm;
+use App\Models\User;
+use App\Models\destination;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class homeController extends Controller
@@ -15,10 +17,38 @@ class homeController extends Controller
     }
 
     public function admin(){
-        return view('admin.home');
+        $user = DB::table('users')
+        ->where('role','=','administrator')
+        ->count();
+
+        $contri = DB::table('users')
+        ->where('role','=','contributor')
+        ->count();
+
+        $dest = DB::table('destinations')
+        ->count();
+
+        $umkm = DB::table('umkms')
+        ->count();
+
+        return view('admin.home', compact('user','contri','dest','umkm'));
     }
     public function contri(){
-        return view('contributor.home');
+        $user = DB::table('users')
+            ->where('role', '=', 'administrator')
+            ->count();
+
+        $contri = DB::table('users')
+            ->where('role', '=', 'contributor')
+            ->count();
+
+        $dest = DB::table('destinations')
+            ->count();
+
+        $umkm = DB::table('umkms')
+            ->count();
+
+        return view('contributor.home', compact('user', 'contri', 'dest', 'umkm'));
     }
 
     public function destinasi(Request $request){
@@ -50,25 +80,4 @@ class homeController extends Controller
         $umkm = Umkm::findOrFail($id);
         return view('detailumkm', compact('umkm'));
     }
-
-    // public function filter(Request $request){
-    //      if($request ->has('filter_kategori', 'keyword')){
-    //         $destinasi = destination::where('dest_name', 'LIKE', '%' . $request->keyword . '%')
-    //         ->where('dest_category', '=', '%' . $request->filter_kategori)->paginate(6);
-    //     } else {
-    //         $destinasi = destination::paginate(6);
-    //     }
-    //     return view('destinasi', compact('destinasi'));
-    // }
-
-    // public function filterUmkm(Request $request){
-    //     if ($request->has('filter_kategori')) {
-    //         $umkm = Umkm::where('umkm_kategori', 'LIKE', '%' . $request->filter_kategori . '%')
-    //             ->paginate(6);
-    //     }
-    //     else {
-    //         $umkm = Umkm::paginate(6);
-    //     }
-    //     return view('umkm', compact('umkm'));
-    // }
 }

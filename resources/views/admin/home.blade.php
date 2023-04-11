@@ -18,7 +18,7 @@
                         <div class="card">
                             <div class="card-body widget-user">
                                 <div class="text-center">
-                                    <h2 class="fw-normal text-primary" data-plugin="counterup">8</h2>
+                                    <h2 class="fw-normal text-primary" data-plugin="counterup">{{ $user }}</h2>
                                     <h5>Admin</h5>
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                         <div class="card">
                             <div class="card-body widget-user">
                                 <div class="text-center">
-                                    <h2 class="fw-normal text-pink" data-plugin="counterup">3</h2>
+                                    <h2 class="fw-normal text-pink" data-plugin="counterup">{{ $contri }}</h2>
                                     <h5>Kontributor</h5>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                         <div class="card">
                             <div class="card-body widget-user">
                                 <div class="text-center">
-                                    <h2 class="fw-normal text-warning" data-plugin="counterup">16</h2>
+                                    <h2 class="fw-normal text-warning" data-plugin="counterup">{{ $dest }}</h2>
                                     <h5>Destinasi</h5>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                         <div class="card">
                             <div class="card-body widget-user">
                                 <div class="text-center">
-                                    <h2 class="fw-normal text-info" data-plugin="counterup">3</h2>
+                                    <h2 class="fw-normal text-info" data-plugin="counterup">{{ $umkm }}</h2>
                                     <h5>UMKM</h5>
                                 </div>
                             </div>
